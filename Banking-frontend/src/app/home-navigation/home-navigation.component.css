@@ -1,0 +1,13 @@
+.header {
+    padding: 5px;
+    text-align: center;
+    background: rgb(86, 29, 243);
+    height: 150px;
+    color: white;
+  }
+  
+  .header h1 {
+    font-size: 40px;
+  }
+
+  

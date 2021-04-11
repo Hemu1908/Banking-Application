@@ -1,1 +1,34 @@
-<p>add-beneficiary works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Beneficiary</title>
+</head>
+<body>
+    <div class="myform">
+    <form action="" >
+        <div class="mainhead">
+            <h1>Add New Beneficiary</h1>
+        </div>
+        <div class="container">
+            <div class="labels">
+                <label>Beneficiary Name</label><br/>
+                <label>Beneficiary Account Number</label><br/>
+                <label>Re-Enter Account Name</label><br/> 
+                <label>Nick Name</label><br/><br/>
+                <input type="checkbox" autocomplete=""/> Save Beneficiary
+            </div>
+            <div class="inputs">
+                <input type="text" name="beneName" required=""  /><br/>
+                <input type="text" name="beneNo" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/><br/>
+                <input type="text" name="mainBeneNo" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/><br/>
+                <input type="text" name="nickName"/><br/>
+            </div>
+        </div>
+            <button class="mainbutton" type="submit">Save As Beneficiary</button>
+    </form>
+</div>
+</body>
+</html>

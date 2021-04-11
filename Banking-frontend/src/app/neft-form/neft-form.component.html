@@ -1,1 +1,49 @@
-<p>neft-form works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTGS Payment</title>
+</head>
+<body>
+    <div class="myform">
+    <form action="" >
+        <div class="mainhead">
+            <h1>Initiate NEFT Payment</h1>
+        </div>
+        <div class="container">
+            <div class="labels">
+                <label>From Account</label><br/>
+                <label>To Account</label><br/>
+                <label>Amount</label><br/> 
+                <label>Transaction Date</label><br/>
+                <label>Remark</label><br/><br/>
+            </div>
+            <div class="inputs">
+                <input type="text" name="from_acccount" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/><br/>
+                <input type="text" name="to_acccount" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/> <input type="button" value ="+"/><br>
+                <input type="text" name="amount" required=""/><br/>
+                <input type="datetime-local" name="transaction_date" required=""/><br/>
+                <input type="text" name="remark" required=""/><br/>
+                <br><br><br>
+
+            </div>
+        </div>
+
+        <pre>
+            <b><i> Please note:
+            1. Transaction will be executed within 30 - 45 mins of time.
+            2. Timings for NEFT : 24 X 7 (all 365 Days)</i>
+        </b></pre>
+        <div id="outer">
+            <button class="inner" type="submit">Save</button>
+            <button class="inner" type="submit">Reset</button>
+            <button class="inner" type="submit">Save as Template</button>
+            <button class="inner" type="submit">Continue</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+

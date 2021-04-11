@@ -26,6 +26,7 @@ import { NetbankingRegistrationComponent } from './netbanking-registration/netba
 import { TransferSuccessComponent } from './transfer-success/transfer-success.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
     NetbankingRegistrationComponent,
     TransferSuccessComponent,
     UserDashboardComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    HomeNavigationComponent
   ],
   imports: [
     BrowserModule,

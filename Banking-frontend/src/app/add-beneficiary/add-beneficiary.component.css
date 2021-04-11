@@ -1,0 +1,107 @@
+
+.myform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 830px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+.mainhead{
+
+    margin:20px auto;
+    margin-top:5px;
+    border:3px solid white;
+    background-color: rgb(86,29,243);
+    height:60px;
+    color:white;
+    padding:0px auto;
+    text-align: center;
+
+}
+
+.container{
+    width: 500px;
+    height: 150px;
+    margin: 0px auto;
+    position: relative;
+    padding :20px 0px 30px 30px;
+}
+
+.labels{
+   width: 200px;
+   height: 140px;
+    float: left;
+}
+
+.inputs{
+    width: 300px;
+    height: 150px;
+    float: left;
+ }
+
+input[type="text"]{
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 6px 20px;
+    border: 3px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+input[type="datetime-local"]{
+    margin-bottom:10px;
+}
+label{
+    line-height: 42px;
+}
+
+input[type="button"]{
+ float:right;
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+
+.inner
+{
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(86,29,243);
+  border: none;
+  border-radius: 10px;
+  margin-top: 2%;
+  font-size: 15px;
+  padding: 10px 15px;
+  margin-right:10px;
+}
+
+.mainbutton{
+
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(86,29,243);
+  border: none;
+  border-radius: 10px;
+  margin-top: 5%;
+  font-size: 15px;
+  padding: 10px 15px;
+  margin-left:300px;
+
+
+}
