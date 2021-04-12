@@ -27,6 +27,8 @@ import { TransferSuccessComponent } from './transfer-success/transfer-success.co
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
+import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
+import { SessionExpiredComponent } from './session-expired/session-expired.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { HomeNavigationComponent } from './home-navigation/home-navigation.compo
     TransferSuccessComponent,
     UserDashboardComponent,
     WelcomePageComponent,
-    HomeNavigationComponent
+    HomeNavigationComponent,
+    SetNewPasswordComponent,
+    SessionExpiredComponent
   ],
   imports: [
     BrowserModule,

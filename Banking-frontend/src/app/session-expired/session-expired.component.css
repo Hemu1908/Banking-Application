@@ -1,0 +1,13 @@
+.form1{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    width: 400px;
+}
+
+p{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}

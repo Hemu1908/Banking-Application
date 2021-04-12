@@ -34,14 +34,14 @@ input[type=text], input[type=password] {
 .btn {
     background-color: #4e2edb;
     color: white;
-    padding: 14px 20px;
-    margin-left: 24%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    padding: 2%;
+    align-self: center;
+    margin-left: 13%;
+    margin-top: 15px;
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    width: 50%;
+    width: 30%;
     font-size: medium;
   }
  .btn:hover {
