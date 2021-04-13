@@ -10,6 +10,9 @@ export class LoginpageComponent{
 
   constructor(private router: Router) { }
 
+  dashboard(){
+    this.router.navigateByUrl('/userDashboard');
+  }
   home(){
     this.router.navigateByUrl('');
   }

@@ -11,21 +11,27 @@ import { AddCredentialComponent } from './add-credential/add-credential.componen
 import { TransactionComponent } from './transaction/transaction.component';
 import { ViewRequestComponent } from './view-request/view-request.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component'
-
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { AccountSummaryComponent } from './account-summary/account-summary.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { AccountStatementComponent } from './account-statement/account-statement.component';
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent},
-  {path: 'registerPage', component: NetbankingRegistrationComponent},
-  {path: 'loginPage', component: LoginpageComponent},
-  {path: 'newAccount', component: CreateAccountComponent},
-  {path: 'forgotPassword', component: ForgotPasswordComponent},
-  {path: 'forgotUserId', component: ForgotUserIdComponent},
-  {path: 'newPasswordPage', component: SetNewPasswordComponent},
+  { path: '', component: HomepageComponent },
+  { path: 'registerPage', component: NetbankingRegistrationComponent },
+  { path: 'loginPage', component: LoginpageComponent },
+  { path: 'newAccount', component: CreateAccountComponent },
+  { path: 'forgotPassword', component: ForgotPasswordComponent },
+  { path: 'forgotUserId', component: ForgotUserIdComponent },
+  { path: 'newPasswordPage', component: SetNewPasswordComponent },
   { path: 'credential',component: AddCredentialComponent },
   { path: 'viewRequest',component: ViewRequestComponent  },
   { path: 'transactionDetail',component:TransactionComponent},
-  { path: 'admin', component: AdminPanelComponent }
-
+  { path: 'admin', component: AdminPanelComponent },
+  { path: 'accDetails', component: AccountDetailsComponent },
+  { path: 'accSummary', component: AccountSummaryComponent },
+  { path: 'userDashboard', component: UserDashboardComponent },
+  { path: 'userDashboard/accStatement', component: AccountStatementComponent }
 ];
  
 @NgModule({

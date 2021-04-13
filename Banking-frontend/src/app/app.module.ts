@@ -31,6 +31,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { AddCredentialComponent } from './add-credential/add-credential.component';
 import { TransactionComponent } from './transaction/transaction.component';
 import { ViewRequestComponent } from './view-request/view-request.component';
+import { DashboardNavigationComponent } from './dashboard-navigation/dashboard-navigation.component';
+import { AccountStatementComponent } from './account-statement/account-statement.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { ViewRequestComponent } from './view-request/view-request.component';
     AdminPanelComponent,
     AddCredentialComponent,
     TransactionComponent,
-    ViewRequestComponent
+    ViewRequestComponent,
+    DashboardNavigationComponent,
+    AccountStatementComponent
   ],
   imports: [
     BrowserModule,

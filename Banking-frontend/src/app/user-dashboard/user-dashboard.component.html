@@ -1,1 +1,43 @@
-<p>user-dashboard works!</p>
+<!DOCTYPE html>
+<html>
+<body>
+<!--This content will be static for all pages-->
+<ul>
+  <li><a routerLink=''>Home</a></li>
+  <li><a routerLink='changePassword'>Change Password</a></li>
+  <li><a routerLink='contact'>Contact</a></li>
+  <li style="float: right;"><a routerLink='logout'>Logout</a></li>
+</ul>
+
+<ul class="vertical">
+    <li class="ver-link"><a href="#">LTI Bank</a></li>
+    <li class="ver-link"><a routerLink='accDetails'>Account Details</a></li>
+    <li class="ver-link"><a routerLink='accSummary'>Account Summary</a></li>
+    <li class="ver-link"><a routerLink='accStatement'>Account Statement</a></li>
+    <li class="ver-link"><a routerLink='transferMoney'>Transfer Money</a></li>
+  </ul>
+  
+  <div class="welcome">
+      <h2>Welcome User!</h2>
+      <h3>Customer Id: 142536789</h3>
+  </div>
+  <div class="details-card">
+    <div class="detail-head">
+        <u>Bank Accounts</u>
+    </div>
+    <div class="detail-body">
+           <span class="acctype">Savings</span>
+           <span class="acno">142536789</span>
+           <span><button class="btn">Check Balance</button></span>
+    </div>
+    <div><hr></div>
+    <div class="detail-body">
+            <span class="acctype">Current</span>
+            <span class="acno">741258963</span>
+            <span><button class="btn">Check Balance</button></span>
+    </div>
+    <div><hr></div>
+</div> 
+
+</body>
+</html>
