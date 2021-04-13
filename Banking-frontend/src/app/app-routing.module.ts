@@ -7,6 +7,11 @@ import { ForgotUserIdComponent } from './forgot-user-id/forgot-user-id.component
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { NetbankingRegistrationComponent } from './netbanking-registration/netbanking-registration.component';
+import { AddCredentialComponent } from './add-credential/add-credential.component';
+import { TransactionComponent } from './transaction/transaction.component';
+import { ViewRequestComponent } from './view-request/view-request.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component'
+
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -16,6 +21,10 @@ const routes: Routes = [
   {path: 'forgotPassword', component: ForgotPasswordComponent},
   {path: 'forgotUserId', component: ForgotUserIdComponent},
   {path: 'newPasswordPage', component: SetNewPasswordComponent},
+  { path: 'credential',component: AddCredentialComponent },
+  { path: 'viewRequest',component: ViewRequestComponent  },
+  { path: 'transactionDetail',component:TransactionComponent},
+  { path: 'admin', component: AdminPanelComponent }
 
 ];
  

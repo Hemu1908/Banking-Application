@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AccountSummaryComponent } from './account-summary/account-summary.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
-import { AdminApprovalComponent } from './admin-approval/admin-approval.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { CheckStatusComponent } from './check-status/check-status.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
@@ -29,6 +27,10 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
 import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
 import { SessionExpiredComponent } from './session-expired/session-expired.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AddCredentialComponent } from './add-credential/add-credential.component';
+import { TransactionComponent } from './transaction/transaction.component';
+import { ViewRequestComponent } from './view-request/view-request.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +38,6 @@ import { SessionExpiredComponent } from './session-expired/session-expired.compo
     AccountDetailsComponent,
     AccountSummaryComponent,
     AddBeneficiaryComponent,
-    AdminApprovalComponent,
-    AdminLoginComponent,
     ChangePasswordComponent,
     CheckStatusComponent,
     CreateAccountComponent,
@@ -58,7 +58,11 @@ import { SessionExpiredComponent } from './session-expired/session-expired.compo
     WelcomePageComponent,
     HomeNavigationComponent,
     SetNewPasswordComponent,
-    SessionExpiredComponent
+    SessionExpiredComponent,
+    AdminPanelComponent,
+    AddCredentialComponent,
+    TransactionComponent,
+    ViewRequestComponent
   ],
   imports: [
     BrowserModule,
