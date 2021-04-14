@@ -1,16 +1,13 @@
-
 .myform{
     font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    margin-top: 4%;
+    margin-left: 32%;
     width: 830px;
     padding: 40px;
-    transform: translate(-50%, -50%);
     background: white;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 2px;
+    border-radius: 0px;
   }
 
   .mainhead{

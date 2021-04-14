@@ -15,6 +15,13 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { AccountSummaryComponent } from './account-summary/account-summary.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
+import { CheckStatusComponent } from './check-status/check-status.component';
+import { FundsTransferComponent } from './funds-transfer/funds-transfer.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ImpsFormComponent } from './imps-form/imps-form.component';
+import { RtgsFormComponent } from './rtgs-form/rtgs-form.component';
+import { NeftFormComponent } from './neft-form/neft-form.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -24,14 +31,36 @@ const routes: Routes = [
   { path: 'forgotPassword', component: ForgotPasswordComponent },
   { path: 'forgotUserId', component: ForgotUserIdComponent },
   { path: 'newPasswordPage', component: SetNewPasswordComponent },
+  { path: 'checkStatus', component: CheckStatusComponent },
   { path: 'credential',component: AddCredentialComponent },
   { path: 'viewRequest',component: ViewRequestComponent  },
   { path: 'transactionDetail',component:TransactionComponent},
   { path: 'admin', component: AdminPanelComponent },
   { path: 'accDetails', component: AccountDetailsComponent },
   { path: 'accSummary', component: AccountSummaryComponent },
-  { path: 'userDashboard', component: UserDashboardComponent },
-  { path: 'userDashboard/accStatement', component: AccountStatementComponent }
+  { path: 'accStatement', component: AccountStatementComponent },
+  { path: 'fundsTransfer', component: FundsTransferComponent },
+  { path: 'imps', component: ImpsFormComponent},
+  { path: 'rtgs', component: RtgsFormComponent},
+  { path: 'neft', component: NeftFormComponent},
+  { path: 'fundsTransfer', component: FundsTransferComponent,
+    children:[
+      { path: 'imps', component: ImpsFormComponent},
+      { path: 'rtgs', component: RtgsFormComponent},
+      { path: 'neft', component: NeftFormComponent}
+    ]},
+  { path: 'changePassword', component:ChangePasswordComponent},
+  { path: 'logout', component: LogoutComponent},
+  { path: 'userDashboard', component: UserDashboardComponent, 
+    children: [
+      { path: 'accStatement', component: AccountStatementComponent },
+      { path: 'accDetails', component: AccountDetailsComponent },
+      { path: 'accSummary', component: AccountSummaryComponent },
+      { path: 'fundsTransfer', component: FundsTransferComponent},
+      { path: 'changePassword', component:ChangePasswordComponent},
+      { path: 'logout', component: LogoutComponent}
+    ]},
+  
 ];
  
 @NgModule({

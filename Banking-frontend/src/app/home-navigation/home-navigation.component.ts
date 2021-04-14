@@ -12,4 +12,6 @@ export class HomeNavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isLoggedIn : boolean = false;
+
 }

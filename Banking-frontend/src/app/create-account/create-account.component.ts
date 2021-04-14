@@ -12,6 +12,11 @@ export class CreateAccountComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  checkStatus(){
+    this.router.navigateByUrl('checkStatus');
+  }
+
   backHome(){
     this.router.navigateByUrl('');
   }

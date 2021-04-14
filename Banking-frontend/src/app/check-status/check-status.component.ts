@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-check-status',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckStatusComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  message: string;
+
+  status(){
+    this.message = "Your status is pending";
+  }
+  home(){
+    this.router.navigateByUrl('');
   }
 
 }

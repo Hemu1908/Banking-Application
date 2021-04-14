@@ -1,0 +1,53 @@
+form {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    background: white;
+    width: 70%;
+  }
+.card {
+    box-shadow: 2px 4px 8px 4px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height:fit-content;
+    width: 90%;
+    margin:auto;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 2%;
+  }
+.head{
+    text-align: center; 
+  }
+
+input[type=text]{
+    width: 80%;
+    height: 40px;
+    padding: 2%;
+    margin-left: 3%;
+    margin-top: 2%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+label{
+    padding: 2%;
+}
+
+.btn {
+    background-color: #4e2edb;
+    color: white;
+    padding: 2%;
+    align-self: center;
+    margin-left: 13%;
+    margin-top: 15px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 30%;
+    font-size: medium;
+  }
+ .btn:hover {
+    opacity: 0.8;
+  }
