@@ -9,11 +9,9 @@ import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.compo
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { CheckStatusComponent } from './check-status/check-status.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { FooterComponent } from './footer/footer.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ForgotUserIdComponent } from './forgot-user-id/forgot-user-id.component';
 import { FundsTransferComponent } from './funds-transfer/funds-transfer.component';
-import { HeaderComponent } from './header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ImpsFormComponent } from './imps-form/imps-form.component';
 import { RtgsFormComponent } from './rtgs-form/rtgs-form.component';
@@ -33,6 +31,7 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { ViewRequestComponent } from './view-request/view-request.component';
 import { DashboardNavigationComponent } from './dashboard-navigation/dashboard-navigation.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +42,9 @@ import { AccountStatementComponent } from './account-statement/account-statement
     ChangePasswordComponent,
     CheckStatusComponent,
     CreateAccountComponent,
-    FooterComponent,
     ForgotPasswordComponent,
     ForgotUserIdComponent,
     FundsTransferComponent,
-    HeaderComponent,
     HomepageComponent,
     ImpsFormComponent,
     RtgsFormComponent,
@@ -66,7 +63,8 @@ import { AccountStatementComponent } from './account-statement/account-statement
     TransactionComponent,
     ViewRequestComponent,
     DashboardNavigationComponent,
-    AccountStatementComponent
+    AccountStatementComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

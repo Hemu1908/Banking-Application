@@ -22,6 +22,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { ImpsFormComponent } from './imps-form/imps-form.component';
 import { RtgsFormComponent } from './rtgs-form/rtgs-form.component';
 import { NeftFormComponent } from './neft-form/neft-form.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -43,14 +44,16 @@ const routes: Routes = [
   { path: 'imps', component: ImpsFormComponent},
   { path: 'rtgs', component: RtgsFormComponent},
   { path: 'neft', component: NeftFormComponent},
+  { path: 'changePassword', component:ChangePasswordComponent},
+  { path: 'logout', component: LogoutComponent},
+  { path: 'contact', component: ContactUsComponent},
   { path: 'fundsTransfer', component: FundsTransferComponent,
     children:[
       { path: 'imps', component: ImpsFormComponent},
       { path: 'rtgs', component: RtgsFormComponent},
       { path: 'neft', component: NeftFormComponent}
     ]},
-  { path: 'changePassword', component:ChangePasswordComponent},
-  { path: 'logout', component: LogoutComponent},
+ 
   { path: 'userDashboard', component: UserDashboardComponent, 
     children: [
       { path: 'accStatement', component: AccountStatementComponent },
@@ -58,6 +61,7 @@ const routes: Routes = [
       { path: 'accSummary', component: AccountSummaryComponent },
       { path: 'fundsTransfer', component: FundsTransferComponent},
       { path: 'changePassword', component:ChangePasswordComponent},
+      { path: 'contact', component: ContactUsComponent},
       { path: 'logout', component: LogoutComponent}
     ]},
   

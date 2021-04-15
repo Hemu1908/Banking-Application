@@ -1,6 +1,6 @@
 <app-user-dashboard></app-user-dashboard>
 <div class="myform">
-    <form action="" >
+    <form action="success()" >
         <div class="mainhead">
             <h1>Initiate IMPS Payment</h1>
         </div>
@@ -27,8 +27,13 @@
             <button class="inner" type="submit">Save</button>
             <button class="inner" type="submit">Reset</button>
             <button class="inner" type="submit">Save as Template</button>
-            <button class="inner" type="submit">Continue</button>
+            <button class="inner" type="submit" (click)="success()">Continue</button>
         </div>
+
+        <!-- <div>
+            <p>{{ message }}</p>
+        </div> -->
+
     </form>
 </div>
 
