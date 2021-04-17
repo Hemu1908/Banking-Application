@@ -23,6 +23,7 @@ import { ImpsFormComponent } from './imps-form/imps-form.component';
 import { RtgsFormComponent } from './rtgs-form/rtgs-form.component';
 import { NeftFormComponent } from './neft-form/neft-form.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'imps', component: ImpsFormComponent},
   { path: 'rtgs', component: RtgsFormComponent},
   { path: 'neft', component: NeftFormComponent},
+  { path: 'addBeneficiary', component: AddBeneficiaryComponent},
   { path: 'changePassword', component:ChangePasswordComponent},
   { path: 'logout', component: LogoutComponent},
   { path: 'contact', component: ContactUsComponent},
@@ -53,17 +55,21 @@ const routes: Routes = [
       { path: 'rtgs', component: RtgsFormComponent},
       { path: 'neft', component: NeftFormComponent}
     ]},
- 
   { path: 'userDashboard', component: UserDashboardComponent, 
     children: [
+      { path: 'registerPage', component: NetbankingRegistrationComponent },
       { path: 'accStatement', component: AccountStatementComponent },
       { path: 'accDetails', component: AccountDetailsComponent },
       { path: 'accSummary', component: AccountSummaryComponent },
+      { path: 'addBeneficiary', component: AddBeneficiaryComponent},
       { path: 'fundsTransfer', component: FundsTransferComponent},
       { path: 'changePassword', component:ChangePasswordComponent},
       { path: 'contact', component: ContactUsComponent},
-      { path: 'logout', component: LogoutComponent}
+      { path: 'logout', component: LogoutComponent},
     ]},
+
+    //admin routes
+    { path: 'admin', component: AdminPanelComponent}
   
 ];
  

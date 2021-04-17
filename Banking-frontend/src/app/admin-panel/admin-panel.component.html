@@ -1,12 +1,11 @@
-<div class="header">
-    <h1>WELCOME ADMIN </h1>
+<router-outlet>
+  <div class="header">
+      <h1>WELCOME ADMIN </h1>
   </div>
-  
   <div class="topnav">
     <a routerLink="/credential" routerLinkActive="active">Set Credential</a>
     <a routerLink="/viewRequest" routerLinkActive="active">View Requests</a>
     <a routerLink="/transactionDetail" routerLinkActive="active">Transaction Details</a>
-    
+    <a routerLink='' routerLinkActive="active" style="float: right;">Logout</a>
   </div>
-  
-  <router-outlet></router-outlet>
+</router-outlet>

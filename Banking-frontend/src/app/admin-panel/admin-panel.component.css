@@ -1,5 +1,6 @@
 .header {
-    background-color: rgb(8, 7, 48);
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(43, 7, 141);
     padding: 20px;
     text-align: center;
     color:white;
@@ -8,14 +9,15 @@
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
-    background-color: black;
+    background-color: lightgray;
   }
   
   /* Style the topnav links */
   .topnav a {
+    font-family: 'Roboto', sans-serif;
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -23,6 +25,6 @@
   
   /* Change color on hover */
   .topnav a:hover {
-    background-color:rgb(55, 90, 247);
-    color: black;
+    background-color:rgba(43, 7, 141, 0.815);
+    color: white;
   }
