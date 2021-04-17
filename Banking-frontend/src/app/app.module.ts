@@ -32,6 +32,8 @@ import { ViewRequestComponent } from './view-request/view-request.component';
 import { DashboardNavigationComponent } from './dashboard-navigation/dashboard-navigation.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -69,7 +71,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

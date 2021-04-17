@@ -11,7 +11,7 @@
   </div>
 
   <div class="registration">
-    <form>
+    <form (ngSubmit)="add()">
       <div class="first-half">
         <label for="title" id="title">Title</label><br>
         <select class="title">
@@ -20,44 +20,45 @@
           <option value="mr">Mr</option>
         </select><br>
 
-        First Name<br><input type="text" id="first_name" placeholder="Enter your first name" /><br>
-        Middle Name<br><input type="text" id="middle_name" placeholder="Enter your middle name" /><br>
-        Last Name<br><input type="text" id="last_name" placeholder="Enter your last name" /><br>
-        Father's Name<br><input type="text" id="father_name" placeholder="Enter your father's name" /><br>
-        Email ID<br><input type="text" id="email" placeholder="Enter your email id" /><br>
-        Aadhar Card Number<br><input type="number" id="aadhar" placeholder="Enter your aadhar card number" /><br>
-        Date of Birth<br><input type="date" id="dob" /><br>
+        First Name<br><input type="text" id="first_name" placeholder="Enter your first name" name="n1" [(ngModel)] = customer.firstName/><br>
+        Middle Name<br><input type="text" id="middle_name" placeholder="Enter your middle name" name="n2" [(ngModel)] = customer.middleName/><br>
+        Last Name<br><input type="text" id="last_name" placeholder="Enter your last name" name="n3" [(ngModel)] = customer.lastName/><br>
+        Father's Name<br><input type="text" id="father_name" placeholder="Enter your father's name" name="n4" [(ngModel)] = customer.fatherName/><br>
+        Email ID<br><input type="text" id="email" placeholder="Enter your email id" name="n5" [(ngModel)] = customer.emailId/><br>
+        Aadhar Card Number<br><input type="number" id="aadhar" placeholder="Enter your aadhar card number" name="n6" [(ngModel)] = customer.aadhaarNo/><br>
+        Date of Birth<br><input type="date" id="dob" name="n7" [(ngModel)] = customer.dateOfBirth/><br>
       </div>
 
       <div class="res">
         <h3>Residential Address</h3><br>
-          Address Line 1<br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" /><br>
-          Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" /><br>
-          Landmark<br><input type="text" id="landmark" placeholder="Enter landmark"/><br>
-          State<br><input type="text" id="state" placeholder="for e.g. Maharashtra" /><br>
-          City<br><input type="text" id="city" placeholder="for e.g. Pune" /><br>
-          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" /><br>
+          Address Line 1<br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" [(ngModel)] = customer.residential /><br>
+          Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" [(ngModel)] = customer.residential /><br>
+          Landmark<br><input type="text" id="landmark" placeholder="Enter landmark" [(ngModel)] = customer.residential /><br>
+          State<br><input type="text" id="state" placeholder="for e.g. Maharashtra" [(ngModel)] = customer.residential /><br>
+          City<br><input type="text" id="city" placeholder="for e.g. Pune" [(ngModel)] = customer.residential /><br>
+          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" [(ngModel)] = customer.residential /><br>
       </div>
 
       <div class="per">
         <h3>Permanent Address</h3><br>
           <input type="checkbox" id="check" />Permanent Address same as Mailing Address<br>
-          Address Line 1<br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" /><br>
-          Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" /><br>
-          Landmark<br><input type="text" id="landmark" placeholder="Enter landmark" /><br>
-          State<br><input type="text" id="state" placeholder="for e.g. Maharashtra" /><br>
-          City<br><input type="text" id="city" placeholder="for e.g. Pune" /><br>
-          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" /><br>
+          Address Line 1<br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" [(ngModel)] = customer.permanent /><br>
+          Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" [(ngModel)] = customer.permanent /><br>
+          Landmark<br><input type="text" id="landmark" placeholder="Enter landmark" [(ngModel)] = customer.permanent /><br>
+          State<br><input type="text" id="state" placeholder="for e.g. Maharashtra" [(ngModel)] = customer.permanent /><br>
+          City<br><input type="text" id="city" placeholder="for e.g. Pune" [(ngModel)] = customer.permanent /><br>
+          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" [(ngModel)] = customer.permanent /><br>
           <h3>Occupation Details</h3><br>
-            Occupation Type<br><input type="text" id="occupation" placeholder="Enter your occupation" /><br>
-            Source of Income<br><input type="text" id="income_source" placeholder="Enter source of income" /><br>
-            Gross Annual Income<br><input type="number" id="gross_income" placeholder="Enter Gross income" /><br>
+            Occupation Type<br><input type="text" id="occupation" placeholder="Enter your occupation" [(ngModel)] = customer.occupation /><br>
+            Source of Income<br><input type="text" id="income_source" placeholder="Enter source of income" [(ngModel)] = customer.incomeSource /><br>
+            Gross Annual Income<br><input type="number" id="gross_income" placeholder="Enter Gross income" [(ngModel)] = customer.annualIncome /><br>
           <h3>Debit/ATM Card</h3><br>
             <p>Do you want a debit card?</p><br>
             <input type="checkbox" id="net_banking" />Opt for Net Banking<br>
             <input type="checkbox" id="i_agree" />I agree..<br>
             <button type="submit" id="btn" (click)="checkStatus()">Submit</button>
             <button type="submit" id="btn" (click)="backHome()">Back</button>
+            <button type="submit">Add</button>
       </div>
     </form>
   </div>

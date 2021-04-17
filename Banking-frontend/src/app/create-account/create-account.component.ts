@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Customer } from '../app-model/customer';
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-create-account',
@@ -8,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  customer: Customer = new Customer(); 
+  message: string
+
+  constructor(private router : Router, private service: CustomerService) { }
 
   ngOnInit(): void {
   }
@@ -21,4 +26,17 @@ export class CreateAccountComponent implements OnInit {
     this.router.navigateByUrl('');
   }
 
+  add() {
+   
+    this.service.addCustomer(this.customer).subscribe(data =>{
+    alert(JSON.stringify(this.customer));
+    alert(JSON.stringify(data));
+    console.log(data);
+    this.message = data['message'];
+    
+  })
+ }
+
+
+  
 }
