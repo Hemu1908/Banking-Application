@@ -8,15 +8,15 @@
       <div class="card">
         <h2>Register for Internet Banking</h2>
         <div class="registration">
-        <form>
-            Account Number<br><input type="number" id="acc_no" placeholder="Enter your account number" /><br>
-            Set Login Password<br><input type="password" id="login_pass" placeholder="Enter password" /><br>
+        <form (ngSubmit)="register()">
+            Account Number<br><input type="number" id="acc_no" placeholder="Enter your account number" [(ngModel)]="credentials.accountNo" required/><br>
+            Set Login Password<br><input type="password" id="login_pass" placeholder="Enter password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$" [(ngModel)]="credentials.password" required/><br>
             <h5>Password should contain at least 6 characters</h5>
-            Confirm Login Password<br><input type="password" id="confirm_pass" placeholder="Confirm password" /><br>
+            Confirm Login Password<br><input type="password" id="confirm_pass" placeholder="Confirm password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$" [(ngModel)]="credentials.confirmPassword" required/><br>
             <h5>Confirm password should be same as login password</h5>
-            Enter OTP<br><input type="number" id="otp" /><br>
+            Enter OTP<br><input type="number" id="otp" [(ngModel)]="credentials.otp" required/><br>
             <h5>Enter the OTP sent on your mobile number/email address</h5>
-            <button type="submit" id="btn">Submit</button>
+            <button type="submit" id="btn" (click)="checkStatus()">Submit</button>
             <button type="submit" id="btn" (click)="backHome()">Back</button>
         </form>
         </div>

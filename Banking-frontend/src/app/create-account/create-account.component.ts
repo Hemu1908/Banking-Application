@@ -33,7 +33,7 @@ export class CreateAccountComponent implements OnInit {
     alert(JSON.stringify(data));
     console.log(data);
     this.message = data['message'];
-    
+    //console.log("hello");
   })
  }
 
