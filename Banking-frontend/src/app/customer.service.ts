@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Customer } from './app-model/customer';
 import { Observable } from 'rxjs';
 import { NetbankingCredentials } from './app-model/netbankingcredentials';
+import { Login } from './app-model/login';
 
 
 @Injectable({
@@ -20,5 +21,10 @@ export class CustomerService {
   registerNetBanking(credentials: NetbankingCredentials) : Observable<object>{
     let url = "http://localhost:8181/netbanking";
     return this.http.post(url,credentials);
+  }
+
+  login(login: Login) : Observable<any> {
+    let url = "http://localhost:8181/login";
+   return this.http.post(url, login); 
   }
 }
