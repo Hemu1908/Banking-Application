@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+<app-home-navigation></app-home-navigation>
+<!--<!DOCTYPE html>
 <html>
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-</head>
+</head>-->
 <body>
   <div class="header">
     <h2>Open a Savings Account</h2>
     <h3>Personal Details</h3>
   </div>
 
-  <div class="registration">
+  <div class="form1">
     <form (ngSubmit)="add()">
       <div class="first-half">
         <label for="title" id="title">Title</label><br>
@@ -50,25 +51,30 @@
           State<br><input type="text" id="state" placeholder="for e.g. Maharashtra" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
           City<br><input type="text" id="city" placeholder="for e.g. Pune" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
           Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
+      </div>
 
+      <div class="occupation">
         <h3>Occupation Details</h3><br>
           Occupation Type<br><input type="text" id="occupation" placeholder="Enter your occupation" name="occupation" [(ngModel)] = "customer.occupation" required/><br>
           Source of Income<br><input type="text" id="income_source" placeholder="Enter source of income" name="incomeSource" [(ngModel)] = "customer.incomeSource" required/><br>
           Revenue Registration No<br><input type="text" id="revenue" placeholder="Revenue registration no" name="revenueRegisterNo" [(ngModel)] = "customer.revenueRegisterNo" required/><br>
           GST No<br><input type="text" id="GST" placeholder="Enter GST no" name="gstNumber" [(ngModel)] = "customer.gstNumber" required/><br>
           Gross Annual Income<br><input type="number" id="gross_income" placeholder="Enter Gross income" name="annualIncome" [(ngModel)] = "customer.annualIncome" required/><br>
+      </div>
 
+      <div class="last">
         <h3>Debit/ATM Card</h3><br>
           <p>Do you want a debit card?</p><br>
           <input type="checkbox" id="net_banking" />Opt for Net Banking<br>
           <input type="checkbox" id="i_agree" required/>I agree..<br>
-          <button type="button" id="btn" (click)="checkStatus()">Submit</button>
-          <button type="button" id="btn" (click)="backHome()">Back</button>
-          <button type="button">Add</button>
-          
+          <button type="submit" (click)="checkStatus()">Submit</button>
+          <button type="submit" (click)="backHome()">Back</button>
+          <button type="submit">Add</button>
       </div>
+          
+    
     </form>
   </div>
 </body>
-</html>
+<!--</html>-->
 

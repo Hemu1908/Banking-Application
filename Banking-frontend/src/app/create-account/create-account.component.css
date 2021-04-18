@@ -1,6 +1,14 @@
-* {
+*
+ 
+  {
     box-sizing: border-box;
   }
+
+  .form1{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    width: 60%;
+}
 
   body {
     font-family: Arial;
@@ -31,26 +39,16 @@
     background-color: white;
   }
 
-  input[type=text], input[type=number] {
-    width: 50%;
-    padding: 8px 10px;
-    margin: 8px 0 5px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    box-sizing: border-box;
-  }
-
-  input[type=date] {
-    width: 25%;
-    padding: 5px 10px 5px 20px;
+  input[type=text], input[type=number], input[type=date], input[type=string] {
+    width: 80%;
+    padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 2px;
     box-sizing: border-box;
-    font-size: 17px;
+    margin-bottom: 20px;
   }
+
 
   select  {
     width: 8%;
@@ -96,17 +94,37 @@
     margin-left: 40px;
   }
 
-  #btn{
-      background-color: rgb(86, 29, 243);
-      width: 20%;
-      height: 100%;
-      color: white;
-      font-size: medium;
-      border: none;
-      padding: 2%;
-      align-self: center;
-      margin-left: 3%;
-      margin-right: 3%;
-      margin-bottom: 10px;
-      border-radius: 2px;
+  .occupation{
+    width: 85%;
+    background-color: white;
+    padding: 20px 0 10px 50px;
+    margin-top: 15px;
+    margin-left: 40px;    
   }
+
+  .last{
+    width: 85%;
+    background-color: white;
+    padding: 20px 0 10px 50px;
+    margin-top: 15px;
+    margin-left: 40px; 
+  }
+
+  button{
+    background-color: rgb(86, 29, 243);
+    width: 30%;
+    height: 100%;
+    color: white;
+    font-size: medium;
+    border: none;
+    padding: 2%;
+    align-self: center;
+    margin-left: 33%;
+    margin-top: 15px;
+    border-radius: 2px;
+}
+
+.title{
+  width: 10%;
+  margin-bottom: 20px;
+}
