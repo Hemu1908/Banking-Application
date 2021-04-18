@@ -1,5 +1,6 @@
 export class Customer{
 
+  referenceNo: number
   title : string
   firstName: string
   lastName: string
@@ -9,10 +10,12 @@ export class Customer{
   emailId: string
   aadhaarNo: number
   panCard: string
-  dateOfBirth: string
-  residential: string
+  dateOfBirth: Date
+  residentialAddress: string
   permanent: string
   occupation: string
   incomeSource:string
+  revenueRegisterNo: string
+  gstNumber: string
   annualIncome: number
   }
