@@ -24,7 +24,7 @@ export class CustomerService {
   }
 
   login(login: Login) : Observable<any> {
-    let url = "http://localhost:8181/login";
+    let url = "http://localhost:8181/userlogin";
    return this.http.post(url, login); 
   }
 }

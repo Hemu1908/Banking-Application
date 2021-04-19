@@ -7,18 +7,21 @@
           </div>
         <div>
             <label for="cname"><b>Customer ID</b></label><br>
-            <input type="text" placeholder="Enter Customer ID" name="cid" required><br>
+            <input type="text" placeholder="Enter Customer ID" name="cid" [(ngModel)]="login.customerId" required><br>
         </div>
         <div>
             <label for="psw"><b>Password</b></label><br>
-            <input type="password" placeholder="Enter Password" name="psw" required><br>
+            <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="login.loginPassword" required><br>
         </div>
         <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
         </label><br>
 
-        <button class="btn" type="submit" (click)="dashboard()">Login</button>
+        <button class="btn" type="submit">Login</button>
+       <!-- <button class="btn" type="submit" (click)="dashboard()">Login</button>-->
         <button class="btn" type="submit" (click)="home()">Back</button>
+        
+
 
         <div class="link"><span class="register"><a routerLink='/newAccount'>New User? Register</a></span><br></div>
         <div class="link"><span class="uid"><a href='forgotUserId'>Forgot User Id?</a></span><br></div>

@@ -26,13 +26,14 @@ export class LoginpageComponent{
   loginCheck(){
     console.log(this.login);
     this.service.login(this.login).subscribe(response =>{
-      alert(JSON.stringify(response));
+     // alert(JSON.stringify(response));
       console.log(response);
-      if(response.loginStatus == true){
+      if(response.status == true){
+        console.log(this.login.customerId);
         let customerId = response.customerId;
-        sessionStorage.setItem('customerId', String(customerId));
-        // sessionStorage.setItem('firstName', this.register.firstName);
-        this.router.navigateByUrl('userDashboard');
+        //alert(JSON.stringify(customerId));
+        sessionStorage.setItem('customerId',String(customerId));
+        this.router.navigate(['userDashboard']);
       }
       else{
         this.message = response.message;

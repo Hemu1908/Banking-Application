@@ -9,7 +9,10 @@ export class UserDashboardComponent implements OnInit {
 
   constructor() { }
 
+  customerId: string;
+
   ngOnInit(): void {
+    this.customerId = sessionStorage.getItem('customerId');
   }
 
 }
