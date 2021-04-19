@@ -27,30 +27,34 @@
         Father's Name<br><input type="text" id="father_name" placeholder="Enter your father's name" name="fatherName" [(ngModel)] = "customer.fatherName" required/><br>
         Mobile Number<br><input type="number" id="mobile_no" placeholder="Enter your mobile no." name="mobileNo" [(ngModel)] = "customer.mobileNo" required/><br>
         Email ID<br><input type="text" id="email" placeholder="Enter your email id" name="emailId" [(ngModel)] = "customer.emailId" required/><br>
-        Aadhar Card Number<br><input type="number" id="aadhar" placeholder="Enter your aadhar card number" name="aadhaarNo" [(ngModel)] = "customer.aadhaarNo" required/><br>
+        Aadhar Card Number<br><input type="number" id="aadhar" #ad="ngModel" placeholder="Enter your aadhar card number" name="aadhaarNo" pattern="^[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}$" [(ngModel)] = "customer.aadhaarNo" required/><br>
+        <div *ngIf="ad.invalid && (ad.dirty || ad.touched) ">
+          <div *ngIf="ad.errors.pattern">Invalid Aadhar Number.</div>
+        </div>
+
         PAN Card Number<br><input type="string" id="PAN" placeholder="Enter your PAN card number" name="panCard" [(ngModel)] = "customer.panCard" required/><br>
         Date of Birth<br><input type="date" id="dob" name="dateOfBirth" [(ngModel)] = "customer.dateOfBirth" required/><br>
       </div>
 
       <div class="res">
         <h3>Residential Address</h3><br>
-          Address Line 1<br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
-          Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
+          Address: <br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
+          <!--Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
           Landmark<br><input type="text" id="landmark" placeholder="Enter landmark" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
           State<br><input type="text" id="state" placeholder="for e.g. Maharashtra" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
           City<br><input type="text" id="city" placeholder="for e.g. Pune" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
-          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>
+          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" name="residentialAddress" [(ngModel)] = "customer.residentialAddress" required/><br>-->
       </div>
 
       <div class="per">
         <h3>Permanent Address</h3><br>
           <input type="checkbox" id="check" />Permanent Address same as Mailing Address<br>
-          Address Line 1<br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
-          Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
+          Address: <br><input type="text" id="addr1" placeholder="Enter address line 1 (for e.g. Flat no. or Plot no)" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
+          <!--Address Line 2<br><input type="text" id="addr2" placeholder="Enter address line 2 (for e.g. name of society)" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
           Landmark<br><input type="text" id="landmark" placeholder="Enter landmark" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
           State<br><input type="text" id="state" placeholder="for e.g. Maharashtra" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
           City<br><input type="text" id="city" placeholder="for e.g. Pune" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
-          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" name="permanent" [(ngModel)] = "customer.permanent" required/><br>
+          Pincode<br><input type="number" id="pincode" placeholder="Enter pincode" name="permanent" [(ngModel)] = "customer.permanent" required/><br>-->
       </div>
 
       <div class="occupation">
@@ -67,9 +71,8 @@
           <p>Do you want a debit card?</p><br>
           <input type="checkbox" id="net_banking" />Opt for Net Banking<br>
           <input type="checkbox" id="i_agree" required/>I agree..<br>
-          <button type="submit" (click)="checkStatus()">Submit</button>
           <button type="submit" (click)="backHome()">Back</button>
-          <button type="submit">Add</button>
+          <button type="submit">Proceed</button>
       </div>
           
     

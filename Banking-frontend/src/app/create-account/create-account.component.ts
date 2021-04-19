@@ -29,10 +29,21 @@ export class CreateAccountComponent implements OnInit {
   add() {
    
     this.service.addCustomer(this.customer).subscribe(data =>{
-    alert(JSON.stringify(this.customer));
-    alert(JSON.stringify(data));
-    console.log(data);
-    this.message = data['message'];
+    //alert(JSON.stringify(this.customer));
+    //alert(JSON.stringify(data));
+    //console.log(data);
+    //this.message = data['message'];
+
+    if(data.status == true){
+      this.router.navigateByUrl('documentUpload');
+    }
+    else{
+     // alert(JSON.stringify(data));
+     alert("already a customer..redirecting to login page!!");
+      this.router.navigateByUrl('loginPage');
+    }
+    
+
   })
  }
 

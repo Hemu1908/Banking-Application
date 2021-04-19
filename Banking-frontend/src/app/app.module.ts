@@ -34,6 +34,7 @@ import { AccountStatementComponent } from './account-statement/account-statement
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DocumentUploadComponent } from './document-upload/document-upload.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { HttpClientModule } from '@angular/common/http';
     ViewRequestComponent,
     DashboardNavigationComponent,
     AccountStatementComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    DocumentUploadComponent
   ],
   imports: [
     BrowserModule,

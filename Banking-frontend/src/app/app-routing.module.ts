@@ -24,9 +24,11 @@ import { RtgsFormComponent } from './rtgs-form/rtgs-form.component';
 import { NeftFormComponent } from './neft-form/neft-form.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
+import { DocumentUploadComponent } from './document-upload/document-upload.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
+  { path: 'documentUpload', component: DocumentUploadComponent },
   { path: 'registerPage', component: NetbankingRegistrationComponent },
   { path: 'loginPage', component: LoginpageComponent },
   { path: 'newAccount', component: CreateAccountComponent },

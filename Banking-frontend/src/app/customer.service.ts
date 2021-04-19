@@ -13,7 +13,7 @@ export class CustomerService {
 
   constructor(private http: HttpClient) { }
 
-  addCustomer(customer: Customer) : Observable<object>{
+  addCustomer(customer: Customer) : Observable<any>{
     let url = "http://localhost:8181/register";
     return this.http.post(url,customer);
   }
