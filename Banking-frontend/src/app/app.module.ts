@@ -32,9 +32,10 @@ import { ViewRequestComponent } from './view-request/view-request.component';
 import { DashboardNavigationComponent } from './dashboard-navigation/dashboard-navigation.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
+import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
 
 
 @NgModule({
@@ -69,13 +70,15 @@ import { DocumentUploadComponent } from './document-upload/document-upload.compo
     DashboardNavigationComponent,
     AccountStatementComponent,
     ContactUsComponent,
-    DocumentUploadComponent
+    DocumentUploadComponent,
+    ViewFilesUploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

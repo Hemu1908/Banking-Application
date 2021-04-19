@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../admin.service';
+import { CustomerRequest } from '../app-model/customerRequest';
+
 
 @Component({
   selector: 'app-view-request',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewRequestComponent implements OnInit {
 
-  constructor() { }
+  accountRequest:CustomerRequest[];
+  constructor( private adminService : AdminService) { }
 
-  ngOnInit(): void {
+
+ ngOnInit(): void {
+    this.adminService. fetchAccountRequest().subscribe(response => {
+      //alert(JSON.stringify(response));
+      this.accountRequest = response;
+    })
   }
 
 }

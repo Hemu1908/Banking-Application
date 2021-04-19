@@ -52,9 +52,7 @@ button {
     cursor: pointer;
   }
   
-.btn1 {
-    background-color: #11bd2ea4;
-    } 
+.btn1 {background-color: #11bd2ea4;} /* Blue */
 .btn2 {background-color: #f44336;}
 
 a:link, a:visited {
@@ -62,5 +60,9 @@ a:link, a:visited {
     text-align: center;
     text-decoration: none;
   }
-  
- 
+  input[type=text]:disabled {
+    background: white;
+    border:none
+   
+    
+  }

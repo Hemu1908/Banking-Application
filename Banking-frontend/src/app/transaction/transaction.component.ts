@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../admin.service';
+import { AdminTransaction } from '../app-model/adminTransaction';
 
 @Component({
   selector: 'app-transaction',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionComponent implements OnInit {
 
-  constructor() { }
+  transaction : AdminTransaction[];
+  constructor( private adminService : AdminService) { }
 
   ngOnInit(): void {
+    this.adminService. fetchTransactions().subscribe(response => {
+      //alert(JSON.stringify(response));
+      this.transaction = response;
+    })
   }
 
 }

@@ -25,6 +25,7 @@ import { NeftFormComponent } from './neft-form/neft-form.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
+import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -71,8 +72,9 @@ const routes: Routes = [
     ]},
 
     //admin routes
-    { path: 'admin', component: AdminPanelComponent}
-  
+    { path: 'admin', component: AdminPanelComponent},
+    {  path: 'viewfile',component:ViewFilesUploadComponent } 
+
 ];
  
 @NgModule({
@@ -80,3 +82,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponent = [AddCredentialComponent , ViewRequestComponent ,TransactionComponent,AdminPanelComponent,ViewFilesUploadComponent]
