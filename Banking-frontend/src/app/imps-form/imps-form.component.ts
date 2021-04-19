@@ -1,22 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Transactions } from '../app-model/transactions';
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-imps-form',
   templateUrl: './imps-form.component.html',
   styleUrls: ['./imps-form.component.css']
 })
-export class ImpsFormComponent implements OnInit {
+export class ImpsFormComponent {
 
-  constructor(private router: Router) { }
+  transactions : Transactions = new Transactions();
+  referenceId : string;
 
-  ngOnInit(): void {
-  }
+  constructor(private service : CustomerService) { }
+
   // message: string;
-  success(){
-    alert("Transaction successful!");
-    this.router.navigateByUrl('userDashboard');
-    // this.message = "Transaction successful!"
+  transfer(){
+    this.service.impsTransaction(this.transactions).subscribe(data=>{
+      console.log(this.transactions);
+      alert(JSON.stringify(data));
+    
+  })
   }
-
 }

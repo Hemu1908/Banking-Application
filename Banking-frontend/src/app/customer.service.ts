@@ -4,6 +4,7 @@ import { Customer } from './app-model/customer';
 import { Observable } from 'rxjs';
 import { NetbankingCredentials } from './app-model/netbankingcredentials';
 import { Login } from './app-model/login';
+import { Transactions } from './app-model/transactions';
 
 
 @Injectable({
@@ -26,5 +27,10 @@ export class CustomerService {
   login(login: Login) : Observable<any> {
     let url = "http://localhost:8181/userlogin";
    return this.http.post(url, login); 
+  }
+
+  impsTransaction(transactions: Transactions) : Observable<object>{
+    let url = "http://localhost:8181/impstransaction";
+    return this.http.post(url,transactions);
   }
 }
