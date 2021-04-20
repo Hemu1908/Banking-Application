@@ -16,7 +16,9 @@ export class ViewFilesUploadComponent  {
   //model driven form
   constructor(private router:Router,private route:ActivatedRoute)  {
     this.myform = new FormGroup({
-      aadhaarNo : new FormControl()
+      serviceRef : new FormControl()
+      /*accType : new FormControl(),
+      aadhaarNo : new FormControl()*/
     }
     )
   }
