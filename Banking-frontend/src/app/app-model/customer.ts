@@ -18,4 +18,8 @@ export class Customer{
   revenueRegisterNo: string
   gstNumber: string
   annualIncome: number
+  aadharPic: string
+  panPic: string
+  lightBill: string
+  gstProof: string
   }

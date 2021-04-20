@@ -6,28 +6,23 @@
 </div>
 <div class="main">
   <p>Click on the "Choose File" button to upload a file:</p>
-  <form>
+  <form (ngSubmit)="upload()" enctype="multipart/form-data">
+
     <h4>Upload Aadhar Card </h4>
-    <input type="file" name="aadhar" value="aadhar" required>
-    <button type="submit">Submit</button><br>
+    <input type="file" name="aadhar" (change)="onFileChange($event)" />
+    <!--<button type="submit">Upload</button><br>-->
 
     <h4>Upload PAN Card</h4>
-    <input type="file" name="pan" value="pan" required>
-    <button type="submit">Submit</button><br>
+    <input type="file" name="panPic" (change)="onFileChange($event)" />
+    <!--<button type="submit">Upload</button><br>-->
 
     <h4>Upload Electricity bill</h4>
-    <input type="file" name="bill" value="bill" required>
-    <button type="submit">Submit</button><br>
+    <input type="file" name="lightBill" (change)="onFileChange($event)" />
+    <!--<button type="submit">Upload</button><br>-->
 
     <h4>Upload CST/VAT/GST Certificate</h4>
-    <input type="file" name="gst" value="gst" required>
-    <button type="submit">Submit</button><br>
+    <input type="file" name="gstProof" (change)="onFileChange($event)" /> <br/><br/>
+    <button type="submit">Upload</button><br>
 
-    <h4>Upload Photo</h4>
-    <label for="img">Select image:</label>
-    <input type="file" id="img" name="img" accept="image/*" required>
-    <button type="submit">Submit</button><br>
-
-    <button type="submit" id="btn">Submit</button>
   </form>
 </div>

@@ -43,4 +43,15 @@ export class CustomerService {
     let url = "http://localhost:8181/rtgstransaction";
     return this.http.post(url,transactions);
   }
+
+  picUpload(formData: FormData) : Observable<any> {
+    let url = "http://localhost:8181/pic-upload";
+   return this.http.post(url, formData); 
+  }
+
+  fetchProfile(id: number) : Observable<Customer> {
+    let url = "http://localhost:8181/profile?customerId="+id;
+   return this.http.get<Customer>(url); 
+  }
+
 }
