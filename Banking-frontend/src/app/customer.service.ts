@@ -33,4 +33,14 @@ export class CustomerService {
     let url = "http://localhost:8181/impstransaction";
     return this.http.post(url,transactions);
   }
+  
+  neftTransaction(transactions: Transactions) : Observable<object>{
+    let url = "http://localhost:8181/nefttransaction";
+    return this.http.post(url,transactions);
+  }
+
+  rtgsTransaction(transactions: Transactions) : Observable<object>{
+    let url = "http://localhost:8181/rtgstransaction";
+    return this.http.post(url,transactions);
+  }
 }

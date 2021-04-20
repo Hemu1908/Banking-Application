@@ -1,6 +1,6 @@
 <app-user-dashboard></app-user-dashboard>
 <div class="myform">
-    <form action="" >
+    <form (ngSubmit)="transfer()" >
         <div class="mainhead">
             <h1>Initiate RTGS Payment</h1>
         </div>
@@ -8,26 +8,24 @@
             <div class="labels">
                 <label>From Account</label><br/>
                 <label>To Account</label><br/>
-                <label>Amount</label><br/> 
-                <label>Transaction Date</label><br/>
-                <label>Maturity Instruction</label><br/>
-                <label>Remark</label><br/><br/>
+                <label>Amount</label><br/>
+                <label>Message</label><br/>
+                <label>Remark</label><br/>
+                <label>Transaction Password</label><br/><br/>
             </div>
             <div class="inputs">
-                <input type="text" name="from_acccount" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/><br/>
-                <input type="text" name="to_acccount" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/> <input type="button" value ="+"/><br>
-                <input type="text" name="amount" required=""/><br/>
-                <input type="datetime-local" name="transaction_date" required=""/><br/>
-                <input type="text" name="maturity_instruction" required=""/><br/>
-                <input type="text" name="remark" required=""/><br/>
+                <input type="text" name="from_acccount" [(ngModel)]=transactions.fromAccount required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/><br/>
+                <input type="text" name="to_acccount" [(ngModel)]=transactions.toAccount required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/> <input type="button" value ="+"/><br>
+                <input type="text" name="amount" [(ngModel)]=transactions.amount required=""/><br/>
+                <input type="text" name="message" [(ngModel)]=transactions.message required=""/><br/>
+                <input type="text" name="remark" [(ngModel)]=transactions.remarks required=""/><br/>
+                <input type="password" name="password" [(ngModel)]=transactions.password required=""><br />
                 
             </div>
         </div>
         <div id="outer">
-            <button class="inner" type="submit">Save</button>
-            <button class="inner" type="submit">Reset</button>
-            <button class="inner" type="submit">Save as Template</button>
-            <button class="inner" type="submit">Continue</button>
+            <button class="inner" type="reset">Reset</button>
+            <button class="inner" type="submit">Send</button>
         </div>
     </form>
 </div>
