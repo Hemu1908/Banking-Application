@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SetNewPasswordComponent } from './set-new-password.component';
+import { OtpValidationComponent } from './otp-validation.component';
 
-describe('SetNewPasswordComponent', () => {
-  let component: SetNewPasswordComponent;
-  let fixture: ComponentFixture<SetNewPasswordComponent>;
+describe('OtpValidationComponent', () => {
+  let component: OtpValidationComponent;
+  let fixture: ComponentFixture<OtpValidationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SetNewPasswordComponent ]
+      declarations: [ OtpValidationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SetNewPasswordComponent);
+    fixture = TestBed.createComponent(OtpValidationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

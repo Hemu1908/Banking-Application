@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgOtpInputModule } from  'ng-otp-input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +24,6 @@ import { TransferSuccessComponent } from './transfer-success/transfer-success.co
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
-import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
 import { SessionExpiredComponent } from './session-expired/session-expired.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { AddCredentialComponent } from './add-credential/add-credential.component';
@@ -36,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
 import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
+import { OtpValidationComponent } from './otp-validation/otp-validation.component';
 
 
 @NgModule({
@@ -61,7 +62,6 @@ import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.
     UserDashboardComponent,
     WelcomePageComponent,
     HomeNavigationComponent,
-    SetNewPasswordComponent,
     SessionExpiredComponent,
     AdminPanelComponent,
     AddCredentialComponent,
@@ -71,14 +71,16 @@ import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.
     AccountStatementComponent,
     ContactUsComponent,
     DocumentUploadComponent,
-    ViewFilesUploadComponent
+    ViewFilesUploadComponent,
+    OtpValidationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgOtpInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

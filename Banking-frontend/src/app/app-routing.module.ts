@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { SetNewPasswordComponent } from './set-new-password/set-new-password.component';
 import { ForgotUserIdComponent } from './forgot-user-id/forgot-user-id.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
@@ -26,6 +25,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
 import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
+import { OtpValidationComponent } from './otp-validation/otp-validation.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'newAccount', component: CreateAccountComponent },
   { path: 'forgotPassword', component: ForgotPasswordComponent },
   { path: 'forgotUserId', component: ForgotUserIdComponent },
-  { path: 'newPasswordPage', component: SetNewPasswordComponent },
+  { path: 'otpValidation', component:OtpValidationComponent},
   { path: 'checkStatus', component: CheckStatusComponent },
   { path: 'credential',component: AddCredentialComponent },
   { path: 'viewRequest',component: ViewRequestComponent  },

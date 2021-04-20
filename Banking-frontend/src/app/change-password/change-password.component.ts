@@ -12,8 +12,8 @@ export class ChangePasswordComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  submit(){
-    this.router.navigateByUrl('/loginPage');
+  otp(){
+    this.router.navigateByUrl('/otpValidation');
   }
 
 }
