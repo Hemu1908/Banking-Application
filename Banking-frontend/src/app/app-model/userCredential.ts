@@ -1,7 +1,8 @@
 export class UserCredential{
-    referenceNumber:number;
+    registration:number;
     customerId: number;
-    AccountNumber: number;
+    accountNumber: number;
     loginPassword: string;
     transactionPassword: string;
+    accountType:string;
 }

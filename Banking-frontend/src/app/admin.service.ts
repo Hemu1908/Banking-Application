@@ -23,7 +23,7 @@ export class AdminService {
   }
 
   setCredential(credential: UserCredential) : Observable<any> {
-    let url = "http://localhost:8181/SetCredential";
+    let url = "http://localhost:8181/setcredential";
    return this.http.post(url, credential); 
   }
 
