@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgOtpInputModule } from  'ng-otp-input';
+//import { NgOtpInputModule } from  'ng-otp-input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -80,7 +80,8 @@ import { OtpValidationComponent } from './otp-validation/otp-validation.componen
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgOtpInputModule
+    //NgOtpInputModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

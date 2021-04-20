@@ -11,9 +11,9 @@ export class OtpValidationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  @ViewChild('ngOtpInput') ngOtpInputRef:any;//Get reference using ViewChild and the specified hash
+  /*@ViewChild('ngOtpInput') ngOtpInputRef:any;//Get reference using ViewChild and the specified hash
   onOtpChange(){
     this.ngOtpInputRef.setValue(9874);//yourvalue can be any string or number eg. 1234 or '1234'
-}
+}*/
 
 }
