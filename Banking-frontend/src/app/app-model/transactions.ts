@@ -5,5 +5,6 @@ export class Transactions{
     amount:number;
     message:string;
     remarks:string;
-
+    password:string;
+    
 }
