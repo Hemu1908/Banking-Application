@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SetPassword } from '../app-model/setPassword'
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-change-password',
@@ -8,12 +10,22 @@ import { Router } from '@angular/router';
 })
 export class ChangePasswordComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  setPassword: SetPassword = new SetPassword();
+  message: string;
+
+  constructor(private router: Router, private service: CustomerService) { }
 
   ngOnInit(): void {
   }
   otp(){
     this.router.navigateByUrl('/otpValidation');
+  }
+
+  add(){
+    this.service.setPassword(this.setPassword).subscribe(data=>{
+      console.log(this.setPassword);
+      alert(JSON.stringify(data));
+    })
   }
 
 }

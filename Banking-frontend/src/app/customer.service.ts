@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { NetbankingCredentials } from './app-model/netbankingcredentials';
 import { Login } from './app-model/login';
 import { Transactions } from './app-model/transactions';
+import { SetPassword } from './app-model/setPassword';
 
 
 @Injectable({
@@ -34,24 +35,8 @@ export class CustomerService {
     return this.http.post(url,transactions);
   }
   
-  neftTransaction(transactions: Transactions) : Observable<object>{
-    let url = "http://localhost:8181/nefttransaction";
-    return this.http.post(url,transactions);
+  setPassword(newPassword: SetPassword) : Observable<object>{
+    let url = "http://localhost:8181/SetPassword";
+    return this.http.post(url, newPassword);
   }
-
-  rtgsTransaction(transactions: Transactions) : Observable<object>{
-    let url = "http://localhost:8181/rtgstransaction";
-    return this.http.post(url,transactions);
-  }
-
-  picUpload(formData: FormData) : Observable<any> {
-    let url = "http://localhost:8181/pic-upload";
-   return this.http.post(url, formData); 
-  }
-
-  fetchProfile(id: number) : Observable<Customer> {
-    let url = "http://localhost:8181/profile?customerId="+id;
-   return this.http.get<Customer>(url); 
-  }
-
 }
