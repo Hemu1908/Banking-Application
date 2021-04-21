@@ -35,6 +35,16 @@ export class CustomerService {
     return this.http.post(url,transactions);
   }
   
+  neftTransaction(transactions: Transactions) : Observable<object>{
+    let url = "http://localhost:8181/nefttransaction";
+    return this.http.post(url,transactions);
+  }
+
+  rtgsTransaction(transactions: Transactions) : Observable<object>{
+    let url = "http://localhost:8181/rtgstransaction";
+    return this.http.post(url,transactions);
+  }
+
   setPassword(newPassword: SetPassword) : Observable<object>{
     let url = "http://localhost:8181/SetPassword";
     return this.http.post(url, newPassword);
