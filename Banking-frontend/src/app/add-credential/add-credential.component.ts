@@ -17,7 +17,7 @@ export class AddCredentialComponent implements OnInit {
     //alert(JSON.stringify(this.credential));
     
     this.credential.registration = Number( this.serviceRef ) ;
-    console.log(this.credential);
+    //console.log(this.credential);
     this.adminService.setCredential(this.credential).subscribe(response => {
       alert(JSON.stringify(response));
       /*if(response.status == true) {
@@ -29,6 +29,30 @@ export class AddCredentialComponent implements OnInit {
 
   ngOnInit(): void {
     this.serviceRef = parseInt(sessionStorage.getItem('serviceRef'));
+    
+  }
+  generateCustId(){
+    let cust = Number(sessionStorage.getItem("serviceRef"));
+    cust+=1000;
+    this.credential.customerId=cust;
+  }
+
+  generateAccNumber(){
+    let cust = Number(sessionStorage.getItem("serviceRef"));
+    cust+=10000;
+    //alert(cust);
+    this.credential.accountNumber=cust;
+  }
+
+  generateloginPwd(){
+    let cust = sessionStorage.getItem("serviceRef");
+    cust += "LoginPass";
+    this.credential.loginPassword=cust;
+  }
+  generateTransactionId(){
+    let cust = sessionStorage.getItem("serviceRef");
+    cust += "tranPass";
+    this.credential.transactionPassword=cust;
   }
 
 }
