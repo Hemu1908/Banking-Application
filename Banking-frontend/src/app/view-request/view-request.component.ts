@@ -9,7 +9,7 @@ import { CustomerRequest } from '../app-model/customerRequest';
   styleUrls: ['./view-request.component.css']
 })
 export class ViewRequestComponent implements OnInit {
-
+  serviceNumber:number;
   accountRequest:CustomerRequest[];
   constructor( private adminService : AdminService) { }
 
@@ -19,6 +19,11 @@ export class ViewRequestComponent implements OnInit {
       //alert(JSON.stringify(response));
       this.accountRequest = response;
     })
+  }
+
+  store(ref:string){
+    sessionStorage.setItem('serviceRef',ref);
+    
   }
 
 }

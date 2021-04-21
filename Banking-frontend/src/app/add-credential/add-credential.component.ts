@@ -10,13 +10,13 @@ import { UserCredential } from '../app-model/userCredential';
 })
 export class AddCredentialComponent implements OnInit {
   credential: UserCredential = new UserCredential();
-  data:any;
+  serviceRef:number;
   constructor(private adminService: AdminService, private router: Router,private route:ActivatedRoute) { }
   
   register() {
     //alert(JSON.stringify(this.credential));
     
-    this.credential.registration = Number( this.data.serviceRef ) ;
+    this.credential.registration = Number( this.serviceRef ) ;
     console.log(this.credential);
     this.adminService.setCredential(this.credential).subscribe(response => {
       alert(JSON.stringify(response));
@@ -27,10 +27,8 @@ export class AddCredentialComponent implements OnInit {
     })
   }
 
-  ngOnInit():void{
-    this.route.queryParams.subscribe((params)=>{
-      this.data = JSON.parse(params.data);
-      
-    })
+  ngOnInit(): void {
+    this.serviceRef = parseInt(sessionStorage.getItem('serviceRef'));
   }
+
 }

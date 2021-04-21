@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl , Validators } from '@angular/forms';
-import { Router,ActivatedRoute } from '@angular/router';
+import { AdminService } from '../admin.service';
+import { CustomerFiles } from '../app-model/customerfiles';
+import { CustomerRequest } from '../app-model/customerRequest';
 
 @Component({
   selector: 'app-view-files-upload',
@@ -8,26 +9,23 @@ import { Router,ActivatedRoute } from '@angular/router';
   styleUrls: ['./view-files-upload.component.css']
 })
 export class ViewFilesUploadComponent  {
-  myform :any;
+ 
   //activatedroute is an interface that gives info on  component route
   //router provides url manipulation,navigation methods
   
-
-  //model driven form
-  constructor(private router:Router,private route:ActivatedRoute)  {
-    this.myform = new FormGroup({
-      serviceRef : new FormControl()
-      /*accType : new FormControl(),
-      aadhaarNo : new FormControl()*/
-    }
-    )
-  }
-  accept(){
-    let data:any = this.myform.value;
-    this.router.navigate(['/credential'],{
-      queryParams:{data:JSON.stringify(data)}
+  /*constructor(private router:Router,private route:ActivatedRoute)  {}*/
+   serviceRef:number;
+   customerFile:CustomerFiles;
+  
+   constructor(private adminService: AdminService){}
+  ngOnInit(): void {
+    this.serviceRef = parseInt(sessionStorage.getItem('serviceRef'));
+    this.adminService.fetchRequestFiles(this.serviceRef).subscribe(response => {
+      //alert(JSON.stringify(response));
+      this.customerFile =response;
+      
     })
   }
 
-
+  
 }

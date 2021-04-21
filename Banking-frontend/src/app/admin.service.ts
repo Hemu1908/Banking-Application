@@ -10,7 +10,7 @@ import { UserCredential } from './app-model/userCredential';
   providedIn: 'root'
 })
 export class AdminService {
-
+  
   constructor(private http: HttpClient) { }
   fetchTransactions() : Observable<AdminTransaction[]> {
     let url = "http://localhost:8181/TransactionViewAdmin";
@@ -20,6 +20,11 @@ export class AdminService {
   fetchAccountRequest() : Observable<CustomerRequest[]> {
     let url = "http://localhost:8181/RequestViewByAdmin";
    return this.http.get<CustomerRequest[]>(url); 
+  }
+
+  fetchRequestFiles(serviceRef:number) : Observable<CustomerRequest> {
+    let url = "http://localhost:8181/FileViewByAdmin?ref="+serviceRef;
+   return this.http.get<CustomerRequest>(url); 
   }
 
   setCredential(credential: UserCredential) : Observable<any> {

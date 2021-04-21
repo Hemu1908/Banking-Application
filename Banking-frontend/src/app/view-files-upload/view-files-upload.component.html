@@ -1,5 +1,5 @@
 <app-admin-panel></app-admin-panel>
-<div [formGroup]="myform">
+
 
     <table class="styled-table">
         <thead>
@@ -18,18 +18,18 @@
         </thead>
         <tbody>
             
-                <tr>
-                    <td><input type="text" style="border:none" formControlName="serviceRef" [ngModel]="69" disabled/></td><!--formControlName is for binding-->
+                <tr *ngFor ="let f of customerFile">
+                    <td>{{ serviceRef }}</td><!--formControlName is for binding-->
                     <!--<td><input type="text" style="border:none" formControlName="aadhaarNo" [ngModel]="1111" disabled/></td>-->
-                    <td>1111</td>
-                    <td>file aadhar</td>
-                    <td>POPR2321</td>
-                    <td>file pan</td>
-                    <td>ABC00001</td>
-                    <td>file ebill</td>
-                    <td>gst12345</td>
-                    <td>file gst</td>
-                    <td><button (click)="accept()" class="btn1">Accept</button></td>
+                    <td>{{ f.aadhaarNo }}</td>
+                    <td>{{ f.aadharPic}}</td>
+                    <td>{{f.panCard}}</td>
+                    <td>{{f.panPic}}</td>
+                    <td>{{f.revenueRegisterNumber}}</td>
+                    <td>{{f.lightBill}}</td>
+                    <td>{{f.gstNumber}}</td>
+                    <td>{{f.gstProof}}</td>
+                    <td><button class="btn1"><a  routerLink="/credential" routerLinkActive="active">Accept</a></button></td>
                     <td><button class="btn2">Reject</button></td>
                     
                 </tr>
@@ -37,5 +37,5 @@
             
         </tbody>
     </table>
-    </div>
+  
     
