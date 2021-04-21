@@ -49,4 +49,9 @@ export class CustomerService {
     let url = "http://localhost:8181/SetPassword";
     return this.http.post(url, newPassword);
   }
+
+  picUpload(formData: FormData) : Observable<any> {
+    let url = "http://localhost:8181/pic-upload";
+   return this.http.post(url, formData); 
+  }
 }
