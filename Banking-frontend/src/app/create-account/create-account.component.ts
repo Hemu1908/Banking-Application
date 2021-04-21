@@ -11,7 +11,8 @@ import { CustomerService } from '../customer.service';
 export class CreateAccountComponent implements OnInit {
 
   customer: Customer = new Customer(); 
-  message: string
+  message: string;
+  
 
   constructor(private router : Router, private service: CustomerService) { }
 
@@ -33,8 +34,13 @@ export class CreateAccountComponent implements OnInit {
     //alert(JSON.stringify(data));
     //console.log(data);
     //this.message = data['message'];
+    //this.customer.referenceNo = data.referenceNo;
 
     if(data.status == true){
+      alert(JSON.stringify(data));
+      console.log(JSON.stringify(data.referenceId));
+      let referenceId = data['referenceId'];
+      sessionStorage.setItem('referenceId',referenceId);
       this.router.navigateByUrl('documentUpload');
     }
     else{

@@ -9,18 +9,21 @@ import { CustomerService } from '../customer.service';
 })
 export class DocumentUploadComponent implements OnInit {
 
-  customer : Customer
+  //customer : Customer
 
   aadharPic: any;
   panPic: any;
   lightBill: any;
   gstProof: any;
-  referenceNo: any;
+  referenceId: any;
 
   constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
-    this.customer.referenceNo = 62;
+    //this.customer.referenceNo = 62;
+    this.referenceId=parseInt(sessionStorage.getItem('referenceId'));
+    //this.referenceNo=96;
+    
   }
 
   onFileChange(event) {
@@ -36,8 +39,9 @@ export class DocumentUploadComponent implements OnInit {
   }
 
   upload() {
+
     let formData: FormData = new FormData();
-    formData.append('referenceNo', this.referenceNo);
+    formData.append('referenceId', this.referenceId);
     formData.append('aadharPic', this.aadharPic);
     formData.append('panPic', this.panPic);
     formData.append('lightBill', this.lightBill);
