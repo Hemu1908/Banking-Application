@@ -5,23 +5,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
-  <script>
-    function addressFunction() {
-        if (document.getElementById(
-          "check").checked) {
-            document.getElementById(
-              "permanent").value = 
-            document.getElementById(
-              "residentialAddress").value;
-          
-        } else {
-            document.getElementById(
-              "permanent").value = "";
-        }
-    }
-</script>
-
-
 </head>
 <body>
   <div class="header">
@@ -41,7 +24,7 @@
           <option value="2">Ms</option>
         </select><br>
 
-        <div *ngIf="myForm.submitted && title.invalid && (title.dirty||title.untouched)">
+        <div *ngIf="title.invalid && (title.dirty||title.touched)">
           <div class="alert alert-danger" *ngIf="title.errors.required">
                Title is required
            </div>
@@ -55,7 +38,7 @@
            #firstName ="ngModel"/><br>
         </div>
        
-        <div *ngIf="myForm.submitted && firstName.invalid && (firstName.dirty||firstName.untouched)">
+        <div *ngIf="firstName.invalid && (firstName.dirty||firstName.touched)">
           <div class="alert alert-danger" *ngIf="firstName.errors.required">
                FirstName is required
            </div>
@@ -69,7 +52,7 @@
         #middleName = "ngModel" /><br>
         </div>
 
-        <div *ngIf="myForm.submitted && middleName.invalid && (middleName.dirty||middleName.untouched)">
+        <div *ngIf="middleName.invalid && (middleName.dirty||middleName.touched)">
           <div class="alert alert-danger" *ngIf="middleName.errors.required">
             middle Name is required
            </div>
@@ -84,7 +67,7 @@
         #lastName = "ngModel"/><br>
         </div>
 
-      <div *ngIf="myForm.submitted && lastName.invalid && (lastName.dirty||lastName.untouched)">
+      <div *ngIf="lastName.invalid && (lastName.dirty||lastName.touched)">
         <div class="alert alert-danger" *ngIf="lastName.errors.required">
           last Name is required
          </div>
@@ -99,7 +82,7 @@
         #fatherName = "ngModel"/><br>
       </div> 
 
-      <div *ngIf="myForm.submitted && fatherName.invalid && (fatherName.dirty||fatherName.untouched)">
+      <div *ngIf="fatherName.invalid && (fatherName.dirty||fatherName.touched)">
         <div class="alert alert-danger" *ngIf="fatherName.errors.required">
           Father Name is required
          </div>
@@ -114,7 +97,7 @@
         #mobileNo = "ngModel"/><br>
       </div>  
 
-      <div *ngIf="myForm.submitted && mobileNo.invalid && (mobileNo.dirty||mobileNo.untouched)">
+      <div *ngIf="mobileNo.invalid && (mobileNo.dirty||mobileNo.touched)">
         <div class="alert alert-danger" *ngIf="mobileNo.errors.required">
           mobile No is required
          </div>
@@ -122,14 +105,14 @@
 
       <div>
         <label> Email ID</label><br>
-        <input type="text" required 
+        <input type="text"  
         placeholder="Enter your email id" 
         name="emailId" 
         [(ngModel)] = "customer.emailId"
         #emailId = "ngModel"/><br>
       </div> 
 
-      <div *ngIf="myForm.submitted && emailId.invalid && (emailId.dirty||emailId.untouched)">
+      <div *ngIf="emailId.invalid && (emailId.dirty||emailId.touched)">
         <div class="alert alert-danger" *ngIf="emailId.errors.required">
           email Id is required
          </div>
@@ -144,7 +127,7 @@
         #aadhaarNo = "ngModel"/><br>
     </div>
 
-    <div *ngIf="myForm.submitted && aadhaarNo.invalid && (aadhaarNo.dirty||aadhaarNo.untouched)">
+    <div *ngIf="aadhaarNo.invalid && (aadhaarNo.dirty||aadhaarNo.touched)">
       <div class="alert alert-danger" *ngIf="aadhaarNo.errors.required">
         aadhaar No is required
        </div>
@@ -159,7 +142,7 @@
       #panCard = "ngModel"/><br>
     </div> 
     
-    <div *ngIf="myForm.submitted && panCard.invalid && (panCard.dirty||panCard.untouched)">
+    <div *ngIf="panCard.invalid && (panCard.dirty||panCard.touched)">
       <div class="alert alert-danger" *ngIf="panCard.errors.required">
         pan Card is required
        </div>
@@ -173,7 +156,7 @@
       #dateOfBirth = "ngModel"/><br>
     </div>
 
-    <div *ngIf="myForm.submitted && dateOfBirth.invalid && (dateOfBirth.dirty||dateOfBirth.untouched)">
+    <div *ngIf="dateOfBirth.invalid && (dateOfBirth.dirty||dateOfBirth.touched)">
       <div class="alert alert-danger" *ngIf="dateOfBirth.errors.required">
         date Of Birth is required
        </div>
@@ -192,7 +175,7 @@
         id="residentialAddress"/><br>
       </div>  
 
-      <div *ngIf="myForm.submitted && residentialAddress.invalid && (residentialAddress.dirty||residentialAddress.untouched)">
+      <div *ngIf="residentialAddress.invalid && (residentialAddress.dirty||residentialAddress.touched)">
         <div class="alert alert-danger" *ngIf="residentialAddress.errors.required">
           residential Address is required
          </div>
@@ -216,7 +199,7 @@
           #occupation = "ngModel"/><br>
         </div> 
 
-        <div *ngIf="myForm.submitted && occupation.invalid && (occupation.dirty||occupation.untouched)">
+        <div *ngIf="occupation.invalid && (occupation.dirty||occupation.touched)">
           <div class="alert alert-danger" *ngIf="occupation.errors.required">
             occupation is required
            </div>
@@ -231,7 +214,7 @@
           #incomeSource = "ngModel"/><br>
         </div>
 
-        <div *ngIf="myForm.submitted && incomeSource.invalid && (incomeSource.dirty||incomeSource.untouched)">
+        <div *ngIf="incomeSource.invalid && (incomeSource.dirty||incomeSource.touched)">
           <div class="alert alert-danger" *ngIf="incomeSource.errors.required">
             Income Source is required
            </div>
@@ -258,7 +241,7 @@
         #annualIncome = "ngModel"/><br>
         </div>
 
-        <div *ngIf="myForm.submitted && annualIncome.invalid && (annualIncome.dirty||annualIncome.untouched)">
+        <div *ngIf="annualIncome.invalid && (annualIncome.dirty||annualIncome.touched)">
           <div class="alert alert-danger" *ngIf="annualIncome.errors.required">
             Annual Income is required
            </div>
