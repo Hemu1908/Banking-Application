@@ -12,17 +12,21 @@ export class ChangePasswordComponent implements OnInit {
 
   setPassword: SetPassword = new SetPassword();
   message: string;
+  customerId: number;
 
   constructor(private router: Router, private service: CustomerService) { }
 
   ngOnInit(): void {
+    this.customerId = parseInt(sessionStorage.getItem('customerId'));
   }
   otp(){
     this.router.navigateByUrl('/otpValidation');
   }
 
   add(){
+    this.setPassword.customerId = this.customerId;
     this.service.setPassword(this.setPassword).subscribe(data=>{
+      
       console.log(this.setPassword);
       alert(JSON.stringify(data));
     })
