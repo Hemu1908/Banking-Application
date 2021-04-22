@@ -16,6 +16,7 @@ export class NeftFormComponent {
   constructor(private service : CustomerService) { }
 
   transfer(){
+    this.transactions.customerId=sessionStorage.getItem('customerId');
     this.service.neftTransaction(this.transactions).subscribe(data=>{
       console.log(this.transactions);
       alert(JSON.stringify(data));

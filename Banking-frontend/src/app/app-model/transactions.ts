@@ -1,5 +1,6 @@
 export class Transactions{
 
+    customerId:string;
     fromAccount:number;
     toAccount:number;
     amount:number;
