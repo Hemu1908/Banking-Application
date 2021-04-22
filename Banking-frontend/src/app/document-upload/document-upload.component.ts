@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Customer } from '../app-model/customer';
 import { CustomerService } from '../customer.service';
 
@@ -17,7 +18,7 @@ export class DocumentUploadComponent implements OnInit {
   gstProof: any;
   referenceId: any;
 
-  constructor(private customerService: CustomerService) { }
+  constructor(private customerService: CustomerService, private router: Router) { }
 
   ngOnInit(): void {
     //this.customer.referenceNo = 62;
@@ -25,6 +26,7 @@ export class DocumentUploadComponent implements OnInit {
     //this.referenceNo=96;
     
   }
+  
 
   onFileChange(event) {
     if(event.target.name=="aadhar")
@@ -53,6 +55,7 @@ export class DocumentUploadComponent implements OnInit {
     console.log(this.aadharPic);
     console.log(this.gstProof);
     console.log(this.lightBill);
+    this.router.navigateByUrl('');
   }
 
 }
