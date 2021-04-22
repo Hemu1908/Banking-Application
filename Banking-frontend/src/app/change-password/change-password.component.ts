@@ -26,6 +26,7 @@ export class ChangePasswordComponent implements OnInit {
       console.log(this.setPassword);
       alert(JSON.stringify(data));
     })
+    //alert("details added successfully");
   }
 
 }
