@@ -5,4 +5,5 @@ export class UserCredential{
     loginPassword: string;
     transactionPassword: string;
     accountType:string;
+    balance:number;
 }

@@ -54,5 +54,20 @@ export class AddCredentialComponent implements OnInit {
     cust += "tranPass";
     this.credential.transactionPassword=cust;
   }
+  generateAll(){
+    let cust = Number(sessionStorage.getItem("serviceRef"));
+    let custStr = sessionStorage.getItem("serviceRef");
+    
+    cust+=1000;
+    this.credential.customerId=cust;
+    cust+=10000;
+    this.credential.accountNumber=cust;
+   
+    custStr += "LoginPass";
+    this.credential.loginPassword=custStr;
+
+    custStr += "tranPass";
+    this.credential.transactionPassword=custStr;
+  }
 
 }
