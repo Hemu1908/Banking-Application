@@ -26,7 +26,7 @@ import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.compo
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
 import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
 import { OtpValidationComponent } from './otp-validation/otp-validation.component';
-
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'documentUpload', component: DocumentUploadComponent },
@@ -73,7 +73,9 @@ const routes: Routes = [
 
     //admin routes
     { path: 'admin', component: AdminPanelComponent},
-    {  path: 'viewfile',component:ViewFilesUploadComponent } 
+    {  path: 'viewfile',component:ViewFilesUploadComponent } ,
+    {  path: 'adminlogin',component:AdminLoginComponent } ,
+    
 
 ];
  

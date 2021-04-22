@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<div class="header">
+    <h1>WELCOME ADMIN </h1>
+</div>
+<body>
+    <div class="modal-body" style="padding:40px 50px;">
+    <form  (ngSubmit) ="verify()">
+        <div class="form-group">
+          <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+          <input type="text" [(ngModel)]=email name="email" class="form-control" id="usrname" placeholder="Enter email" />
+        </div>
+        <div class="form-group">
+          <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+          <input type="text" [(ngModel)]=pass name="pass" class="form-control" id="psw" placeholder="Enter password" />
+        </div>
+      
+          <button type="submit"  class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Login </button>
+          <p *ngIf=msg style="color:red;font-size: 20px;"> Invalid Username or password </p>
+        </form>
+    </div>
+</body>
+</html>
+<!--<a routerLink="/admin" routerLinkActive="active">-->

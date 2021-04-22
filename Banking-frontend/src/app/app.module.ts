@@ -37,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DocumentUploadComponent } from './document-upload/document-upload.component';
 import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
 import { OtpValidationComponent } from './otp-validation/otp-validation.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { OtpValidationComponent } from './otp-validation/otp-validation.componen
     ContactUsComponent,
     DocumentUploadComponent,
     ViewFilesUploadComponent,
-    OtpValidationComponent
+    OtpValidationComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
