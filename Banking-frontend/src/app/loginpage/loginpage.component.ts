@@ -16,9 +16,6 @@ export class LoginpageComponent{
   message: string;
   constructor(private router: Router, private service: CustomerService) { }
 
-  dashboard(){
-    this.router.navigateByUrl('/userDashboard');
-  }
   home(){
     this.router.navigateByUrl('');
   }

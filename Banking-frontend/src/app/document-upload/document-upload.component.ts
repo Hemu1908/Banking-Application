@@ -10,7 +10,7 @@ import { CustomerService } from '../customer.service';
 })
 export class DocumentUploadComponent implements OnInit {
 
-  //customer : Customer
+  customer : Customer
 
   aadharPic: any;
   panPic: any;
@@ -26,7 +26,6 @@ export class DocumentUploadComponent implements OnInit {
     //this.referenceNo=96;
     
   }
-  
 
   onFileChange(event) {
     if(event.target.name=="aadhar")

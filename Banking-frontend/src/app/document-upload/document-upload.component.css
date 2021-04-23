@@ -1,0 +1,32 @@
+.header{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+.card {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 2px 4px 8px 4px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height:fit-content;
+    width: 70%;
+    margin:auto;
+    padding-top: 2%;
+    padding-left: 3%;
+    padding-bottom: 2%;
+  }
+  input[type="file"]{
+      color: red;
+  }
+  .btn{
+    background-color: rgb(86, 29, 243);
+    width: 20%;
+    height: 80%;
+    color: white;
+    font-size: medium;
+    border: none;
+    padding: 1%;
+    align-self: center;
+    margin-top: 15px;
+    border-radius: 2px;
+  }

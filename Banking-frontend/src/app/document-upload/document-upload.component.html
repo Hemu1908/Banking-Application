@@ -4,26 +4,33 @@
     <h1>Documents Upload</h1>
     <p>Upload your documents to get verified</p>
 </div>
-<div class="main">
+<div class="card">
   <p>Click on the "Choose File" button to upload a file:</p>
-  <form (ngSubmit)="upload()" enctype="multipart/form-data">
+  <form (ngSubmit)="upload()" #docForm="ngForm" enctype="multipart/form-data">
 
 
     <h4>Upload Aadhar Card </h4>
-    <input type="file" name="aadhar" (change)="onFileChange($event)" />
-    <!--<button type="submit">Upload</button><br>-->
+    <input type="file" name="aadhar" (change)="onFileChange($event)" #aadhar="ngModel" [(ngModel)]="customer.aadharPic" required/>
+    <div class="validations" *ngIf="onFileChange && aadhar.invalid && (aadhar.dirty||aadhar.touched)">
+      <div *ngIf="aadhar.errors.required">
+           Aadhar Card is required!
+      </div>
+  </div>
 
     <h4>Upload PAN Card</h4>
-    <input type="file" name="panPic" (change)="onFileChange($event)" />
-    <!--<button type="submit">Upload</button><br>-->
-
+    <input type="file" name="panPic" (change)="onFileChange($event)" #pan="ngModel" [(ngModel)]="customer.panPic" required/>
+    <div class="validations" *ngIf="onFileChange && pan.invalid && (pan.dirty||pan.touched)">
+      <div *ngIf="pan.errors.required">
+           Pan Card is required!
+      </div>
+  </div>
     <h4>Upload Electricity bill</h4>
     <input type="file" name="lightBill" (change)="onFileChange($event)" />
     <!--<button type="submit">Upload</button><br>-->
 
     <h4>Upload CST/VAT/GST Certificate</h4>
     <input type="file" name="gstProof" (change)="onFileChange($event)" /> <br/><br/>
-    <button type="submit">Upload</button><br>
+    <button type="submit" class="btn">Upload</button><br>
 
   </form>
 </div>

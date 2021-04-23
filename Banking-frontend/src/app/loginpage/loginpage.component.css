@@ -17,6 +17,10 @@ form {
     padding-left: 3%;
     padding-bottom: 2%;
   }
+  .validations{
+    font-family: 'Roboto', sans-serif;
+    color: red;
+  }
 .head{
     text-align: center; 
   }
