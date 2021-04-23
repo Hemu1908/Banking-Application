@@ -1,6 +1,11 @@
 <app-user-dashboard></app-user-dashboard>
 <div class="card">
   <h1>Account Summary</h1>
+  <h4>Enter Account Number:</h4>
+  
+  <input type="number" name="accountNumber" [(ngModel)] = "accountNumber"
+  #accountNumber = "ngModel"/>
+  <button type="submit" (click)="viewSummary()">Search</button><br/>
   <!-- <div class="content">
       <label for="from">Statement From </label>
       <input type="text" id="from"/><span><label for="to">To </label>
@@ -12,33 +17,12 @@
         <th>Account Number</th>
         <th>Account Type</th>
         <th>Available Balance</th>
-        <th>Status</th>
       </tr>
       <tr>
-        <td>145263</td>
-        <td>Savings</td>
-        <td>65000</td>
-        <td>Debited</td>
-      </tr>
-      <tr>
-        <td>147853</td>
-        <td>Savings</td>
-        <td>358000</td>
-        <td>Credited</td>
-      </tr>
-      <tr>
-        <td>145263</td>
-        <td>Current</td>
-        <td>100000</td>
-        <td>Debited</td>
-      </tr>
-      <tr>
-        <td>78541</td>
-        <td>Current</td>
-        <td>40000</td>
-        <td>Credited</td>
-      </tr>
-            
+        <td>{{accountSummary.accountNumber}}</td>
+        <td>{{accountSummary.accountType}}</td>
+        <td>{{accountSummary.bankBalance}}</td>
+      </tr> 
     </table>
           
   </div>

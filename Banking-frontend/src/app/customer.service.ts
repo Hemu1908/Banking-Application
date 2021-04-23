@@ -6,6 +6,7 @@ import { NetbankingCredentials } from './app-model/netbankingcredentials';
 import { Login } from './app-model/login';
 import { Transactions } from './app-model/transactions';
 import { SetPassword } from './app-model/setPassword';
+import { AccountSummary } from './app-model/accountSummary';
 
 
 @Injectable({
@@ -53,5 +54,10 @@ export class CustomerService {
   picUpload(formData: FormData) : Observable<any> {
     let url = "http://localhost:8181/pic-upload";
    return this.http.post(url, formData); 
+  }
+
+  accountSummary(accountNumber: number) : Observable<AccountSummary>{
+    let url = "http://localhost:8181/accountSummary?accountNumber="+accountNumber;
+    return this.http.get<AccountSummary>(url); 
   }
 }
