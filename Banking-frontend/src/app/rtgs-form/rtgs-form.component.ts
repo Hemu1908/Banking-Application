@@ -11,6 +11,7 @@ export class RtgsFormComponent  {
 
   transactions : Transactions = new Transactions();
   referenceId : string;
+  accounts = JSON.parse(sessionStorage.getItem('accounts'));
 
   constructor(private service : CustomerService) { }
 

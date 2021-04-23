@@ -28,8 +28,10 @@ export class LoginpageComponent{
       if(response.status == true){
         console.log(this.login.customerId);
         let customerId = response.customerId;
+        let accounts: any[]= response.accounts;
         //alert(JSON.stringify(customerId));
         sessionStorage.setItem('customerId',String(customerId));
+        sessionStorage.setItem('accounts',JSON.stringify(accounts));
         this.router.navigate(['userDashboard']);
       }
       else{
