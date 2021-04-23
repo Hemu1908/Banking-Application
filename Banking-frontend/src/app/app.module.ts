@@ -38,6 +38,7 @@ import { DocumentUploadComponent } from './document-upload/document-upload.compo
 import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
 import { OtpValidationComponent } from './otp-validation/otp-validation.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminAccountTransactionComponent } from './admin-account-transaction/admin-account-transaction.component';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     DocumentUploadComponent,
     ViewFilesUploadComponent,
     OtpValidationComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    AdminAccountTransactionComponent
   ],
   imports: [
     BrowserModule,
