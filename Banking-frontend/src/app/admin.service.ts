@@ -32,4 +32,9 @@ export class AdminService {
    return this.http.post(url, credential); 
   }
 
+  fetchFiles(serviceRef:number) : Observable<CustomerRequest> {
+    let url = "http://localhost:8181/profile?referenceId="+serviceRef;
+   return this.http.get<CustomerRequest>(url); 
+  }
+
 }

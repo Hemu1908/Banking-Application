@@ -1,6 +1,13 @@
 <app-admin-panel></app-admin-panel>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
     <table class="styled-table">
         <thead>
             <tr>
@@ -18,17 +25,17 @@
         </thead>
         <tbody>
             
-                <tr *ngFor ="let f of customerFile">
+                <tr *ngIf =justFiles>
                     <td>{{ serviceRef }}</td><!--formControlName is for binding-->
                     <!--<td><input type="text" style="border:none" formControlName="aadhaarNo" [ngModel]="1111" disabled/></td>-->
-                    <td>{{ f.aadhaarNo }}</td>
-                    <td>{{ f.aadharPic}}</td>
-                    <td>{{f.panCard}}</td>
-                    <td>{{f.panPic}}</td>
-                    <td>{{f.revenueRegisterNumber}}</td>
-                    <td>{{f.lightBill}}</td>
-                    <td>{{f.gstNumber}}</td>
-                    <td>{{f.gstProof}}</td>
+                    <td>{{ justFiles.aadhaarNo }}</td>
+                    <td><button style="background-color: rgb(90, 207, 90);"><a  target="_blank"  href="http://localhost:8181/downloads/{{justFiles.aadharPic}}">View</a></button></td>
+                    <td>{{justFiles.panCard}}</td>
+                    <td><button style="background-color: rgb(90, 207, 90);"><a  target="_blank"   href="http://localhost:8181/downloads/{{justFiles.panPic}}">View</a></button></td>
+                    <td>{{justFiles.revenueRegisterNumber}}</td>
+                    <td><button style="background-color: rgb(90, 207, 90);"><a target="_blank"  href="http://localhost:8181/downloads/{{justFiles.lightBill}}">View</a></button></td>
+                    <td>{{justFiles.gstNumber}}</td>
+                    <td><button style="background-color: rgb(90, 207, 90);"><a  target="_blank"  href="http://localhost:8181/downloads/{{justFiles.gstProof}}">View</a></button></td>
                     <td><button class="btn1"><a  routerLink="/credential" routerLinkActive="active">Accept</a></button></td>
                     <td><button class="btn2">Reject</button></td>
                     
@@ -37,5 +44,9 @@
             
         </tbody>
     </table>
+</body>
+</html>
+
+   
   
     

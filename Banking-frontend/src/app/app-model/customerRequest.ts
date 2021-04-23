@@ -17,7 +17,7 @@ export class CustomerRequest{
   annualIncome: number;
   revenueRegisterNumber: string;
   gstNumber: string;
-  adharPic: string;
+  aadharPic: string;
   panPic: string;
   lightBill: string;
   gstProof: string;

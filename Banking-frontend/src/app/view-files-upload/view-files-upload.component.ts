@@ -16,15 +16,19 @@ export class ViewFilesUploadComponent  {
   /*constructor(private router:Router,private route:ActivatedRoute)  {}*/
    serviceRef:number;
    customerFile:CustomerFiles;
-  
+   justFiles:CustomerFiles;
+   
    constructor(private adminService: AdminService){}
   ngOnInit(): void {
     this.serviceRef = parseInt(sessionStorage.getItem('serviceRef'));
-    this.adminService.fetchRequestFiles(this.serviceRef).subscribe(response => {
+    /*this.adminService.fetchRequestFiles(this.serviceRef).subscribe(response => {
       //alert(JSON.stringify(response));
       this.customerFile =response;
       
-    })
+    });*/
+    this.adminService.fetchFiles(this.serviceRef).subscribe(response=>{
+      this.justFiles =response;
+    });
   }
 
   
