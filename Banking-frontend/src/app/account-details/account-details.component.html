@@ -3,15 +3,24 @@
   <div class="detail-head">
       <u>Bank Accounts</u>
   </div>
-  <div class="detail-body">
-         <span class="acctype">Savings</span>
-         <span class="acno">142536789</span>
-         <span><button class="btn">Check Balance</button></span>
-  </div>
-  <div><hr></div>
-  <div class="detail-body">
-          <span class="acctype">Current</span>
-          <span class="acno">741258963</span>
-          <span><button class="btn">Check Balance</button></span>
-  </div>
-  <div><hr></div>
+  <table  class="styled-table">
+      <thead>
+        <tr>
+          <th>ACCOUNT_NUMBER</th>
+          <th>ACCOUNT_TYPE</th>
+          <th>BALANCE</th>   
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of details" >
+            <td>{{r[0]}}</td>
+            <td>{{r[1]}}</td>
+            <td>{{r[2]}}</td>
+      </tr> 
+    </tbody>
+  </table>
+
+</div>
+ 
+  
+  

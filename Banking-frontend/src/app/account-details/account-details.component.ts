@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../admin.service';
+import { UserCredential } from '../app-model/userCredential';
 
 @Component({
   selector: 'app-account-details',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountDetailsComponent implements OnInit {
 
-  constructor() { }
+  details:UserCredential[];
+  custId: number;
+  constructor(private adminService: AdminService) { }
 
   ngOnInit(): void {
+
+    this.custId = parseInt(sessionStorage.getItem('customerId'));
+    //alert(this.custId);
+    this.adminService.getDetails(this.custId).subscribe(response => {
+      //alert(JSON.stringify(response));
+      this.details= response;
+   
+    });
+    
   }
+    
 
 }
