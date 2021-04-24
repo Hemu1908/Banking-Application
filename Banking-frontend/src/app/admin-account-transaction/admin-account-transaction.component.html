@@ -1,1 +1,19 @@
-<p>admin-account-transaction works!</p>
+<app-admin-panel></app-admin-panel>
+<table  class="styled-table">
+    <thead>
+      <tr>
+        <th>ACCOUNT_NUMBER</th>
+        <th>ACCOUNT_TYPE</th>
+        <th>BALANCE</th> 
+        <th>CHECK TRANSACTION</th>  
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of details" >
+          <td>{{r[0]}}</td>
+          <td>{{r[1]}}</td>
+          <td>{{r[2]}}</td>
+          <td><button (click)="store(r[0])" routerLink="/transactionDetail" class="btn" routerLinkActive="active">VIEW</button></td>
+    </tr> 
+  </tbody>
+</table>
