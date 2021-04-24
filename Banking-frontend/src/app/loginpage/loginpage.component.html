@@ -9,7 +9,7 @@
             <label for="cname"><b>Customer ID</b></label><br>
             <input type="text" placeholder="Enter Customer ID" name="cid" #id="ngModel" [(ngModel)]="login.customerId" required><br>
         </div>
-        <div class="validations" *ngIf="loginForm.submitted && id.invalid && (id.dirty||id.untouched)">
+        <div class="validations" *ngIf="loginForm.submitted && id.invalid && (id.dirty||id.touched)">
             <div *ngIf="id.errors.required">
                  Customer Id is required!
             </div>

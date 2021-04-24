@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Customer } from '../app-model/customer';
 import { CustomerService } from '../customer.service';
 
@@ -37,6 +38,7 @@ export class CreateAccountComponent implements OnInit {
     //this.customer.referenceNo = data.referenceNo;
 
     if(data.status == true){
+
       alert(JSON.stringify(data));
       console.log(JSON.stringify(data.referenceId));
       let referenceId = data['referenceId'];
@@ -54,5 +56,5 @@ export class CreateAccountComponent implements OnInit {
  }
 
 
-  
+
 }
