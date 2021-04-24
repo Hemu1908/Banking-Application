@@ -27,6 +27,7 @@ import { DocumentUploadComponent } from './document-upload/document-upload.compo
 import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.component';
 import { OtpValidationComponent } from './otp-validation/otp-validation.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminAccountTransactionComponent } from './admin-account-transaction/admin-account-transaction.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'documentUpload', component: DocumentUploadComponent },
@@ -75,6 +76,7 @@ const routes: Routes = [
     { path: 'admin', component: AdminPanelComponent},
     {  path: 'viewfile',component:ViewFilesUploadComponent } ,
     {  path: 'adminlogin',component:AdminLoginComponent } ,
+    { path: 'accountdetails',component:AdminAccountTransactionComponent}
     
 
 ];
