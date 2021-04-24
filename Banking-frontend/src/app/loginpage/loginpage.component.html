@@ -1,7 +1,7 @@
 <app-home-navigation></app-home-navigation>
-<form #loginForm="ngForm" (ngSubmit) = "loginCheck()">
+<form #loginForm="ngForm" (ngSubmit) = "loginCheck($event)">
     <div class="card">
-        <p class="validations" *ngIf="id.invalid || psw.invalid">{{ message }}</p>
+        <p class="validations">{{ message }}</p>
         <div class="head">
             <h1>Login</h1>
           </div>
@@ -9,7 +9,7 @@
             <label for="cname"><b>Customer ID</b></label><br>
             <input type="text" placeholder="Enter Customer ID" name="cid" #id="ngModel" [(ngModel)]="login.customerId" required><br>
         </div>
-        <div class="validations" *ngIf="loginForm.submitted && id.invalid && (id.dirty||id.touched)">
+        <div class="validations" *ngIf="loginForm.submitted && id.invalid && (id.dirty||id.untouched)">
             <div *ngIf="id.errors.required">
                  Customer Id is required!
             </div>
@@ -27,7 +27,7 @@
             <input type="checkbox" checked="checked" name="remember"> Remember me
         </label><br>
 
-        <button class="btn" type="submit">Login</button>
+        <button class="btn" type="submit" [disabled]>Login</button>
         <button class="btn" type="submit" (click)="home()">Back</button>
         
         <div class="link"><span class="register"><a routerLink='/newAccount'>New User? Register</a></span><br></div>
