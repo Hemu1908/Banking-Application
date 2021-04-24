@@ -21,12 +21,6 @@ export class AdminService {
     let url = "http://localhost:8181/RequestViewByAdmin";
    return this.http.get<CustomerRequest[]>(url); 
   }
-
-  /*fetchRequestFiles(serviceRef:number) : Observable<CustomerRequest> {
-    let url = "http://localhost:8181/FileViewByAdmin?ref="+serviceRef;
-   return this.http.get<CustomerRequest>(url); 
-  }*/
-
   setCredential(credential: UserCredential) : Observable<any> {
     let url = "http://localhost:8181/setcredential";
    return this.http.post(url, credential); 
@@ -40,5 +34,13 @@ export class AdminService {
     let url = "http://localhost:8181/remove?referenceId="+serviceRef;
    return this.http.delete<CustomerRequest>(url); 
   }
+  getDetails(customerId:number) : Observable<UserCredential[]> {
+    let url = "http://localhost:8181/accountview?customerId="+customerId;
+   return this.http.get<UserCredential[]>(url); 
+  }
 
 }
+ /*fetchRequestFiles(serviceRef:number) : Observable<CustomerRequest> {
+    let url = "http://localhost:8181/FileViewByAdmin?ref="+serviceRef;
+   return this.http.get<CustomerRequest>(url); 
+  }*/

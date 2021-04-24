@@ -21,38 +21,24 @@ export class LoginpageComponent{
     this.router.navigateByUrl('');
   }
 
-  loginCheck(event){
-    if(this.login.customerId == null || this.login.loginPassword == null){
-      Swal.fire({
-        title: "Error",
-        text: "Login id and password required",
-        icon: "error",
-        confirmButtonText: "Okay"
-      });
-    }
-    else{
-      console.log(this.login);
-      this.service.login(this.login).subscribe(response =>{
-      // alert(JSON.stringify(response));
-        console.log(response);
-        if(response.status == true){
-          console.log(this.login.customerId);
-          let customerId = response.customerId;
-          //alert(JSON.stringify(customerId));
-          sessionStorage.setItem('customerId',String(customerId));
-          Swal.fire({
-            title: "Successful",
-            text: "Login Successful",
-            icon: "success",
-            confirmButtonText: "Okay"
-          });
-          this.router.navigate(['userDashboard']);
-        }
-        else{
-          this.message = response.message;
-        }
-      })
-    }
-}
+  loginCheck(){
+    console.log(this.login);
+    this.service.login(this.login).subscribe(response =>{
+     // alert(JSON.stringify(response));
+      console.log(response);
+      if(response.status == true){
+        console.log(this.login.customerId);
+        let customerId = response.customerId;
+        let accounts: any[]= response.accounts;
+        //alert(JSON.stringify(customerId));
+        sessionStorage.setItem('customerId',String(customerId));
+        sessionStorage.setItem('accounts',JSON.stringify(accounts));
+        this.router.navigate(['userDashboard']);
+      }
+      else{
+        this.message = response.message;
+      }
+    })
+  }
 
 }

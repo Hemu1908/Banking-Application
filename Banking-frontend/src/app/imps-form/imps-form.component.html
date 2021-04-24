@@ -15,7 +15,9 @@
 
             </div>
             <div class="inputs">
-                <input type="text" name="from_acccount" [(ngModel)]=transactions.fromAccount required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/><br/>
+                <select name="from_acccount" [(ngModel)]=transactions.fromAccount>
+                    <option value ={{accounts[0]}}>{{accounts[0]}}</option>
+                </select><br /><br />
                 <input type="text" name="to_acccount" [(ngModel)]=transactions.toAccount required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')"/> <input type="button" value ="+"/><br>
                 <input type="text" name="amount" [(ngModel)]=transactions.amount required=""/><br/>
                 <input type="text" name="message" [(ngModel)]=transactions.message required=""/><br/>
