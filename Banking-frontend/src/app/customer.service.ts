@@ -7,6 +7,7 @@ import { Login } from './app-model/login';
 import { Transactions } from './app-model/transactions';
 import { SetPassword } from './app-model/setPassword';
 import { AccountSummary } from './app-model/accountSummary';
+import { AddBeneficiary } from './app-model/addBeneficiary';
 
 
 @Injectable({
@@ -64,5 +65,10 @@ export class CustomerService {
   sendOtp(customerId: number) : Observable<any>{
     let url = "http://localhost:8181/sendOtp?customerId="+ customerId;
     return this.http.get<any>(url);
-  }
+}
+  addBeneficiary(addNewBeneficiary: AddBeneficiary) : Observable<any>{
+  let url = "http://localhost:8181/addBeneficiary";
+  return this.http.post(url, addNewBeneficiary);
+}
+
 }
