@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { SetPassword } from '../app-model/setPassword'
 import { CustomerService } from '../customer.service';
 
@@ -28,7 +29,14 @@ export class ChangePasswordComponent implements OnInit {
     this.service.setPassword(this.setPassword).subscribe(data=>{
       
       console.log(this.setPassword);
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
+      Swal.fire({
+        title: "Change Password",
+        text: "Password changed successfully!",
+        icon: "success",
+        confirmButtonText: "Okay"
+      });
+      this.router.navigateByUrl('/loginPage');
     })
     //alert("details added successfully");
   }

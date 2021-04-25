@@ -60,4 +60,9 @@ export class CustomerService {
     let url = "http://localhost:8181/accountSummary?accountNumber="+accountNumber;
     return this.http.get<AccountSummary>(url); 
   }
+
+  sendOtp(customerId: number) : Observable<any>{
+    let url = "http://localhost:8181/sendOtp?customerId="+ customerId;
+    return this.http.get<any>(url);
+  }
 }
