@@ -32,8 +32,8 @@ export class AddBeneficiaryComponent implements OnInit {
     this.addBeneficiary.compoundKey.userAccountNo=this.accounts[0];
     console.log(this.addBeneficiary.compoundKey.userAccountNo);
       alert(JSON.stringify(this.addBeneficiary));
-      this.service.addBeneficiary(this.addBeneficiary).subscribe(data => {
-
+      this.service.addBeneficiary(this.addBeneficiary.compoundKey.userAccountNo,this.addBeneficiary.compoundKey.beneficiaryAccountNo,this.addBeneficiary.beneficiaryName,this.addBeneficiary.nickName).subscribe(data => {
+        alert(JSON.stringify(data));
       })
 }
 }

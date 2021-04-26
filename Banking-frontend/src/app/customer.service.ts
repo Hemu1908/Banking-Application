@@ -68,9 +68,9 @@ export class CustomerService {
     return this.http.get<any>(url);
 }
 
-  addBeneficiary(addBeneficiary: AddBeneficiary) : Observable<object>{
-  let url = "http://localhost:8181/addBeneficiary";
-  return this.http.post(url, addBeneficiary);
+  addBeneficiary(userAccountNo: number, beneficiaryAccountNo: number, beneficiaryName: string, nickName: string) : Observable<any>{
+  let url = "http://localhost:8181/addBeneficiary?userAcc="+userAccountNo+"&beneAcc="+beneficiaryAccountNo+"&beneName="+beneficiaryName+"&nickName="+nickName;
+  return this.http.get(url);
 
 
 }
