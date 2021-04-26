@@ -43,7 +43,13 @@ export class ImpsFormComponent {
     this.transactions.customerId=sessionStorage.getItem('customerId');
     if(this.fetchedOtp == this.userOtp){
       this.service.impsTransaction(this.transactions).subscribe(data=>{
-      console.log(this.transactions);
+      //console.log(this.transactions);
+      if(data.status==true){
+      let refer= data.refernceNo;
+      let message= data.message;
+      sessionStorage.setItem('message',message);
+      sessionStorage.setItem('referenceNo',String(refer));
+      }
       //alert(JSON.stringify(data));
       Swal.fire({ 
         title: "Transfer Successful",

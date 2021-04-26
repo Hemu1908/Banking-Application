@@ -32,17 +32,17 @@ export class CustomerService {
    return this.http.post(url, login); 
   }
 
-  impsTransaction(transactions: Transactions) : Observable<object>{
+  impsTransaction(transactions: Transactions) : Observable<any>{
     let url = "http://localhost:8181/impstransaction";
     return this.http.post(url,transactions);
   }
   
-  neftTransaction(transactions: Transactions) : Observable<object>{
+  neftTransaction(transactions: Transactions) : Observable<any>{
     let url = "http://localhost:8181/nefttransaction";
     return this.http.post(url,transactions);
   }
 
-  rtgsTransaction(transactions: Transactions) : Observable<object>{
+  rtgsTransaction(transactions: Transactions) : Observable<any>{
     let url = "http://localhost:8181/rtgstransaction";
     return this.http.post(url,transactions);
   }
