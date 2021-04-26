@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { Customer } from '../app-model/customer';
 import { CustomerService } from '../customer.service';
 
@@ -48,12 +49,19 @@ export class DocumentUploadComponent implements OnInit {
     formData.append('lightBill', this.lightBill);
     formData.append('gstProof', this.gstProof);
     this.customerService.picUpload(formData).subscribe(response => {
-    alert(JSON.stringify(response));
+    //alert(JSON.stringify(response));
+    
     });
     console.log(this.panPic);
     console.log(this.aadharPic);
     console.log(this.gstProof);
     console.log(this.lightBill);
+    Swal.fire({
+      title: "Successful",
+      text: "Documents uploaded successfully!",
+      icon: "success",
+      confirmButtonText: "Okay"
+    });
     this.router.navigateByUrl('');
   }
 

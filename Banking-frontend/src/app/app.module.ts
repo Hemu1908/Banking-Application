@@ -40,7 +40,7 @@ import { OtpValidationComponent } from './otp-validation/otp-validation.componen
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminAccountTransactionComponent } from './admin-account-transaction/admin-account-transaction.component';
 import Swal from 'sweetalert2';
-import { MiniStatementComponent } from './mini-statement/mini-statement.component';
+
 
 
 @NgModule({
@@ -79,7 +79,6 @@ import { MiniStatementComponent } from './mini-statement/mini-statement.componen
     OtpValidationComponent,
     AdminLoginComponent,
     AdminAccountTransactionComponent,
-    MiniStatementComponent
   ],
   imports: [
     BrowserModule,
