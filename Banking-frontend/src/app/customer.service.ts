@@ -67,9 +67,10 @@ export class CustomerService {
     let url = "http://localhost:8181/sendOtp?customerId="+ customerId;
     return this.http.get<any>(url);
 }
-  addBeneficiary(addNewBeneficiary: AddBeneficiary) : Observable<any>{
+
+  addBeneficiary(addBeneficiary: AddBeneficiary) : Observable<object>{
   let url = "http://localhost:8181/addBeneficiary";
-  return this.http.post(url, addNewBeneficiary);
+  return this.http.post(url, addBeneficiary);
 
 
 }
