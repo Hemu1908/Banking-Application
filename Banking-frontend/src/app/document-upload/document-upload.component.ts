@@ -35,9 +35,6 @@ export class DocumentUploadComponent implements OnInit {
     this.panPic = event.target.files[0];
     else if(event.target.name=="lightBill")
     this.lightBill = event.target.files[0];
-    else if(event.target.name=="gstProof")
-    this.gstProof = event.target.files[0];
-    console.log("hiii");
   }
 
   upload() {
@@ -47,15 +44,10 @@ export class DocumentUploadComponent implements OnInit {
     formData.append('aadharPic', this.aadharPic);
     formData.append('panPic', this.panPic);
     formData.append('lightBill', this.lightBill);
-    formData.append('gstProof', this.gstProof);
     this.customerService.picUpload(formData).subscribe(response => {
-    //alert(JSON.stringify(response));
     
     });
-    console.log(this.panPic);
-    console.log(this.aadharPic);
-    console.log(this.gstProof);
-    console.log(this.lightBill);
+
     Swal.fire({
       title: "Successful",
       text: "Documents uploaded successfully!",
