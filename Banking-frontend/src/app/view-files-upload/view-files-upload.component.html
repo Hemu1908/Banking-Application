@@ -29,13 +29,13 @@
                     <td>{{ serviceRef }}</td><!--formControlName is for binding-->
                     <!--<td><input type="text" style="border:none" formControlName="aadhaarNo" [ngModel]="1111" disabled/></td>-->
                     <td>{{ justFiles.aadhaarNo }}</td>
-                    <td><button style="background-color: rgb(90, 207, 90);"><a (click)="check1()" target="_blank"  href="http://localhost:8181/downloads/{{justFiles.aadharPic}}">View</a></button></td>
+                    <td><button style="background-color: rgb(17, 136, 6);"><a (click)="check1()" target="_blank"  href="http://localhost:8181/downloads/{{justFiles.aadharPic}}">View</a></button></td>
                     <td>{{justFiles.panCard}}</td>
-                    <td><button style="background-color: rgb(90, 207, 90);"><a (click)="check2()" target="_blank"   href="http://localhost:8181/downloads/{{justFiles.panPic}}">View</a></button></td>
+                    <td><button style="background-color: rgb(17, 136, 6);"><a (click)="check2()" target="_blank"   href="http://localhost:8181/downloads/{{justFiles.panPic}}">View</a></button></td>
                     <td>{{justFiles.revenueRegisterNumber}}</td>
-                    <td><button style="background-color: rgb(90, 207, 90);"><a (click)="check3()" target="_blank"  href="http://localhost:8181/downloads/{{justFiles.lightBill}}">View</a></button></td>
+                    <td><button style="background-color: rgb(17, 136, 6);"><a (click)="check3()" target="_blank"  href="http://localhost:8181/downloads/{{justFiles.lightBill}}">View</a></button></td>
                     <td>{{justFiles.gstNumber}}</td>
-                    <td><button style="background-color: rgb(90, 207, 90);"><a (click)="check4()" target="_blank"  href="http://localhost:8181/downloads/{{justFiles.gstProof}}">View</a></button></td>
+                    <td><button style="background-color: rgb(17, 136, 6);"><a (click)="check4()" target="_blank"  href="http://localhost:8181/downloads/{{justFiles.gstProof}}">View</a></button></td>
                     <td *ngIf=checked ><button class="btn1"><a   routerLink="/credential" routerLinkActive="active">Accept</a></button></td>
                     <td *ngIf=checked ><button class="btn2" (click)="reject()">Reject</button></td>
                   
