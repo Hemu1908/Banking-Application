@@ -22,10 +22,7 @@
             <div *ngIf="psw.errors.required">
                  Enter Valid Password!
              </div>
-        </div>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label><br>
+        </div><br>
 
         <button class="btn" type="submit" [disabled]>Login</button>
         <button class="btn" type="submit" (click)="home()">Back</button>

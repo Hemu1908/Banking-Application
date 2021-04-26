@@ -44,11 +44,23 @@ export class ImpsFormComponent {
     if(this.fetchedOtp == this.userOtp){
       this.service.impsTransaction(this.transactions).subscribe(data=>{
       console.log(this.transactions);
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
+      Swal.fire({ 
+        title: "Transfer Successful",
+        text: "Amount debited successfully!",
+        icon: "success",
+        confirmButtonText: "Okay"
+      });
     })
     }
     else{
-      alert("Invalid Otp!");
+      //alert("Invalid Otp!");
+      Swal.fire({
+        title: "Transfer Unsuccessful",
+        text: "Transfer rejected because of invald OTP",
+        icon: "error",
+        confirmButtonText: "Okay"
+      });
     }
   
   }
