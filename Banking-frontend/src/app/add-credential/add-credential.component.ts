@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 import { AdminService } from '../admin.service';
 import { UserCredential } from '../app-model/userCredential';
 
@@ -19,7 +20,14 @@ export class AddCredentialComponent implements OnInit {
     this.credential.registration = Number( this.serviceRef ) ;
     //console.log(this.credential);
     this.adminService.setCredential(this.credential).subscribe(response => {
-      alert(JSON.stringify(response));
+      //alert(JSON.stringify(response));
+      Swal.fire({
+        title: "Mail",
+        text: "Mail sent successfully!",
+        icon: "success",
+        confirmButtonText: "Okay"
+      });
+      this.router.navigateByUrl('/admin');
       /*if(response.status == true) {
         sessionStorage.setItem('customerId', response.accountNumber);
         this.router.navigate(['register-confirmation']);

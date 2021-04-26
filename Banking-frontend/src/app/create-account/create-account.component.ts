@@ -39,7 +39,13 @@ export class CreateAccountComponent implements OnInit {
 
     if(data.status == true){
 
-      alert(JSON.stringify(data));
+      //alert(JSON.stringify(data));
+      Swal.fire({
+        title: "Registration",
+        text: "Details added successfully!",
+        icon: "success",
+        confirmButtonText: "Okay"
+      });
       console.log(JSON.stringify(data.referenceId));
       let referenceId = data['referenceId'];
       sessionStorage.setItem('referenceId',referenceId);
@@ -47,7 +53,13 @@ export class CreateAccountComponent implements OnInit {
     }
     else{
      // alert(JSON.stringify(data));
-     alert("already a customer..redirecting to login page!!");
+     //alert("already a customer..redirecting to login page!!");
+     Swal.fire({
+      title: "Welcome Customer",
+      text: "Already a customer..redirecting to login page!!",
+      icon: "success",
+      confirmButtonText: "Okay"
+    });
       this.router.navigateByUrl('loginPage');
     }
     
