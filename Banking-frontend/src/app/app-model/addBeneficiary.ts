@@ -1,8 +1,10 @@
 export class AddBeneficiary{
     beneficiaryName: string;
     nickName: string;
-    compoundKey:{
-      beneficiaryAccountNo: number;
-      userAccountNo: number;
-    }
+    compoundKey: compoundKey = new compoundKey();
+}
+export class compoundKey{
+
+  beneficiaryAccountNo: number;
+  userAccountNo: number;
 }
