@@ -7,5 +7,7 @@ export class Transactions{
     message:string;
     remarks:string;
     password:string;
-    
+    transactionDate:string;
+    modeOfTransaction:string;
+    status:string;
 }

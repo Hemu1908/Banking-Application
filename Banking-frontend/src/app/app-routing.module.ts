@@ -28,6 +28,7 @@ import { ViewFilesUploadComponent } from './view-files-upload/view-files-upload.
 import { OtpValidationComponent } from './otp-validation/otp-validation.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminAccountTransactionComponent } from './admin-account-transaction/admin-account-transaction.component';
+import { MiniStatementComponent } from './mini-statement/mini-statement.component';
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'documentUpload', component: DocumentUploadComponent },
@@ -46,6 +47,7 @@ const routes: Routes = [
   { path: 'accSummary', component: AccountSummaryComponent },
   { path: 'accStatement', component: AccountStatementComponent },
   { path: 'fundsTransfer', component: FundsTransferComponent },
+  { path: 'ministatement', component: MiniStatementComponent},
   { path: 'imps', component: ImpsFormComponent},
   { path: 'rtgs', component: RtgsFormComponent},
   { path: 'neft', component: NeftFormComponent},
