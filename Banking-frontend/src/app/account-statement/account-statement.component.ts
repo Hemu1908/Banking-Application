@@ -2,9 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AdminService } from '../admin.service';
 import { Transactions } from '../app-model/transactions';
 import { CustomerService} from '../customer.service';
-import * as jspdf from 'jspdf';
-import html2canvas from 'html2canvas';
-import { AdminTransaction } from '../app-model/adminTransaction';
+import { jsPDF } from 'jspdf';
+
 
 @Component({
   selector: 'app-account-statement',
@@ -22,10 +21,9 @@ export class AccountStatementComponent implements OnInit {
   searchCheck:boolean = false;
   downloadCheck:boolean = false; 
   account :number;
- allTransaction = true; 
+ allTransaction = false; 
+ out = false;
   constructor(private customerService: CustomerService) { }
-
-  
 
   ngOnInit(): void {
     this.customerId = parseInt(sessionStorage.getItem('customerId'));
@@ -48,7 +46,14 @@ export class AccountStatementComponent implements OnInit {
     
   }
 
+  ministmt(){
+    this.allTransaction = true;
+    this.searchCheck=false;
+    this.downloadCheck=false;
+  }
+
   download(fromDate:string,toDate:string){
+    this.out=false;
     this.allTransaction = false;
     this.searchCheck=false;
     this.downloadCheck = true;
@@ -62,12 +67,14 @@ export class AccountStatementComponent implements OnInit {
     
   }
 
+  @ViewChild('contents',{static:false}) el!: ElementRef;
+
   downloadPdf(){
 
-    var element = document.getElementById('my_table');
+    /*var element = document.getElementById('my_table');
     const input = document.getElementById('my_table');
     //const divHeight = input.clientHeight;
-    const divHeight = document.documentElement.clientHeight-250;
+    const divHeight = document.documentElement.clientHeight-150;
     
     const divWidth = document.documentElement.clientWidth;
     const ratio = divHeight / divWidth;
@@ -78,10 +85,20 @@ export class AccountStatementComponent implements OnInit {
       const width = doc.internal.pageSize.getWidth();
       let height = doc.internal.pageSize.getHeight();
       height = ratio * width;
-      doc.addImage(imgData, 5, 10, width - 20, height - 10)//x,y,height,
+      doc.addImage(imgData, 5, 5, width - 20, height - 10)//x,y,height,
       doc.save("AccountStmt.pdf");
 
-    })
+    })*/
+
+    let pdf = new jsPDF('p','pt','a4');//potrait
+    pdf.html(this.el.nativeElement,{
+      callback : (pdf) => {
+        pdf.save("demo.pdf");
+      }
+    });
+   
+    
+
   }
 
 }

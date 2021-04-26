@@ -75,7 +75,7 @@ export class CustomerService {
 
 }
 accountStatementDate(customerId: number,fromDate:string,toDate:string) : Observable<Transactions[]>{
-  let url = "http://localhost:8181/getTransactionsByDate?customerId="+customerId+"&fromDate='"+fromDate+"'&toDate='"+toDate+"'";
+  let url = "http://localhost:8181/getTransactionsByDate?customerId="+customerId+"&fromDate="+fromDate+"&toDate="+toDate;
   return this.http.get<Transactions[]>(url); 
 }
 //http://localhost:8181/getTransactionsByDate?customerId=1157&fromDate='2001/05/31'&toDate='2011/05/01'
