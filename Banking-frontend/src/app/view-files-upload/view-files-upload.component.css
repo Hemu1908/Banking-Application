@@ -52,7 +52,7 @@ button {
     cursor: pointer;
   }
   
-.btn1 {background-color: #11bd2ea4;} /* Blue */
+.btn1 {background-color: rgb(17, 136, 6);} /* Blue */
 .btn2 {background-color: #f44336;}
 
 a:link, a:visited {

@@ -18,7 +18,7 @@
             <span *ngIf="beneName.dirty || beneName.touched">Please enter beneficiary name</span> -->
 
             <label for="beneNo">Beneficiary Account Number</label><br/>
-            <input type="text" name="beneficiaryAccountNo" [(ngModel)]="addBeneficiary.compoundKey.beneficiaryAccountNo" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')" #addBeneficiary.compoundKey.beneficiaryAccountNo="ngModel" /><br/>
+            <input type="number" name="beneficiaryAccountNo" [(ngModel)]="addBeneficiary.compoundKey.beneficiaryAccountNo" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')" #addBeneficiary.compoundKey.beneficiaryAccountNo="ngModel" /><br/>
             
 
             <!--<label for="mainBeneNo">Re-Enter Account Number</label><br/>
