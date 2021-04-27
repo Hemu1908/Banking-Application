@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddBeneficiary } from '../app-model/addBeneficiary';
 import { CustomerService } from '../customer.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-beneficiary',
@@ -17,23 +18,35 @@ export class AddBeneficiaryComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
-    
     this.accounts = JSON.parse(sessionStorage.getItem('accounts'));
     console.log(this.accounts);
-    
-    //console.log(this.addBeneficiary.compoundKey.userAccountNo);
 
   }
 
-  add(){
-    //this.addBeneficiary.userAccountNo = parseInt(sessionStorage.getItem('accounts'));
-    //alert(this.addBeneficiary.nickName);
+  add(event){
     this.addBeneficiary.compoundKey.userAccountNo=this.accounts[0];
     console.log(this.addBeneficiary.compoundKey.userAccountNo);
-      alert(JSON.stringify(this.addBeneficiary));
+    if(this.addBeneficiary.beneficiaryName == null || this.addBeneficiary.compoundKey == null || this.addBeneficiary.nickName == null){
+      Swal.fire({
+        title: "Error",
+        text: "Please enter all the details",
+        icon: "error",
+        confirmButtonText: "Okay"
+      });
+    }
+    else{
       this.service.addBeneficiary(this.addBeneficiary.compoundKey.userAccountNo,this.addBeneficiary.compoundKey.beneficiaryAccountNo,this.addBeneficiary.beneficiaryName,this.addBeneficiary.nickName).subscribe(data => {
-        alert(JSON.stringify(data));
+        if(data.status==true){
+          Swal.fire({
+            title: "Beneficiary",
+            text: "Details added successfully!",
+            icon: "success",
+            confirmButtonText: "Okay"
+          });
+        }
+        
       })
+    }
+      
 }
 }

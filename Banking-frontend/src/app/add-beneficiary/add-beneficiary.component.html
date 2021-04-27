@@ -1,6 +1,6 @@
 <app-user-dashboard></app-user-dashboard>
 <div class="card">
-<form (ngSubmit)="myForm.form.valid && add()" #myForm="ngForm">
+<form (ngSubmit)="add($event)" #myForm="ngForm">
     <div class="mainhead">
         <h1>Add New Beneficiary</h1>
     </div>
@@ -9,25 +9,14 @@
            <label for="userAccountNo">Account Number</label><br/>
             <input type="text" name="userAccountNo" [(ngModel)]="addBeneficiary.compoundKey.userAccountNo" required="" #userAccountNo="ngModel" /><br/>
             
-            <!--<select name="from_acccount" [(ngModel)]="addBeneficiary.compoundKey.userAccountNo">
-                <option value ={{accounts[0]}}>{{accounts[0]}}</option>
-            </select><br /><br />-->
             <label for="beneName">Beneficiary Name</label><br/>
             <input type="text" name="beneficiaryName" [(ngModel)]="addBeneficiary.beneficiaryName" required="" #beneficiaryName="ngModel" /><br/>
-            <!-- <span *ngIf="beneName.invalid && beneName.errors?.required">Please enter correct beneficiary name</span>
-            <span *ngIf="beneName.dirty || beneName.touched">Please enter beneficiary name</span> -->
-
+           
             <label for="beneNo">Beneficiary Account Number</label><br/>
             <input type="number" name="beneficiaryAccountNo" [(ngModel)]="addBeneficiary.compoundKey.beneficiaryAccountNo" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')" #addBeneficiary.compoundKey.beneficiaryAccountNo="ngModel" /><br/>
-            
-
-            <!--<label for="mainBeneNo">Re-Enter Account Number</label><br/>
-            <input type="text" name="confirmBeneficiaryAccountNo" required="" oninvalid="this.setCustomValidity('Please Enter Valid Account Number ')" oninput="setCustomValidity('')" /><br/>
-            <span *ngIf="confirmBeneficiaryAccountNo!==addBeneficiary.beneficiaryAccountNo">Please re-enter correct Beneficiary Account Number</span>
-            -->
+        
             <label for="nickName">Nick Name</label><br/>
             <input type="text" name="nickName" [(ngModel)]="addBeneficiary.nickName" #nickName="ngModel" /><br/>
-
 
             <input type="checkbox" autocomplete=""/> Save Beneficiary
             <br>
