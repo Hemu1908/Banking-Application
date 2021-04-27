@@ -20,7 +20,6 @@ import { NeftFormComponent } from './neft-form/neft-form.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { LogoutComponent } from './logout/logout.component';
 import { NetbankingRegistrationComponent } from './netbanking-registration/netbanking-registration.component';
-import { TransferSuccessComponent } from './transfer-success/transfer-success.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
@@ -60,7 +59,6 @@ import Swal from 'sweetalert2';
     LoginpageComponent,
     LogoutComponent,
     NetbankingRegistrationComponent,
-    TransferSuccessComponent,
     UserDashboardComponent,
     WelcomePageComponent,
     HomeNavigationComponent,
