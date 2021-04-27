@@ -42,29 +42,38 @@ export class NeftFormComponent {
   transfer(){
     this.transactions.customerId=sessionStorage.getItem('customerId');
     if(this.fetchedOtp == this.userOtp){
-      this.service.neftTransaction(this.transactions).subscribe(data=>{
-        //console.log(this.transactions);
-        if(data.status==true){
-          let refer= data.refernceNo;
-          let message= data.message;
-          sessionStorage.setItem('message',message);
-          sessionStorage.setItem('referenceNo',String(refer));
+      Swal.fire({ 
+        title: "Transfer Successful",
+        text: "Amount debited successfully!",
+        icon: "success",
+        confirmButtonText: "Okay"
+      });
+      this.service.rtgsTransaction(this.transactions).subscribe(data=>{
+          if(data.status == true){
+            Swal.fire({ 
+              title: "Transfer Successful",
+              text: "Amount debited successfully!",
+              icon: "success",
+              confirmButtonText: "Okay"
+            });
           }
-          //alert(JSON.stringify(data));
-          Swal.fire({ 
-            title: "Transfer Successful",
-            text: "Amount debited successfully!",
-            icon: "success",
-            confirmButtonText: "Okay"
-          });
-
+          else{
+            Swal.fire({
+              title: "Transfer Unsuccessful",
+              html: '<h2>Transfer rejected due to one following reasons:</h2>'+
+                    '<h3>1. Insufficient balance</h3>'+
+                    '<h3>2. Invalid Transaction password</h3>',
+              icon: "error",
+              confirmButtonText: "Okay"
+            });
+          }
         })
         }
         else{
           //alert("Invalid Otp!");
           Swal.fire({
             title: "Transfer Unsuccessful",
-            text: "Transfer rejected because of invald OTP",
+            text: "Transfer rejected because of invalid OTP",
             icon: "error",
             confirmButtonText: "Okay"
           });
