@@ -48,7 +48,7 @@ export class NeftFormComponent {
         icon: "success",
         confirmButtonText: "Okay"
       });
-      this.service.rtgsTransaction(this.transactions).subscribe(data=>{
+      this.service.neftTransaction(this.transactions).subscribe(data=>{
           if(data.status == true){
             Swal.fire({ 
               title: "Transfer Successful",
