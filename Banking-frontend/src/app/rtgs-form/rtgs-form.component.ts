@@ -60,7 +60,8 @@ export class RtgsFormComponent  {
               title: "Transfer Unsuccessful",
               html: '<h2>Transfer rejected due to one following reasons:</h2>'+
                     '<h3>1. Entered amount cannot be less than 2,00,000</h3>'+
-                    '<h3>2. Invalid Transaction password</h3>',
+                    '<h3>2. Invalid Receipent account number</h3>'+
+                    '<h3>3. Invalid Transaction password</h3>',
               icon: "error",
               confirmButtonText: "Okay"
             });

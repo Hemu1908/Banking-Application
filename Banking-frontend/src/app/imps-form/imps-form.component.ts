@@ -62,8 +62,9 @@ export class ImpsFormComponent {
               title: "Transfer Unsuccessful",
               html: '<h2>Transfer rejected due to one following reasons:</h2>'+
                     '<h3>1. Insufficient balance</h3>'+
-                    '<h3>2. Invalid Transaction password</h3>'+
-                    '<h3>3. Amount more than 2 lacs cannot be transferred using IMPS</h3>',
+                    '<h3>2. Invalid Receipent account number</h3>'+
+                    '<h3>3. Invalid Transaction password</h3>'+
+                    '<h3>4. Amount more than 2 lacs cannot be transferred using IMPS</h3>',
               icon: "error",
               confirmButtonText: "Okay"
             });
