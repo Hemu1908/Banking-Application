@@ -43,7 +43,7 @@ export class ViewFilesUploadComponent  {
   
   addToString(ch:string){
     this.fileCount+=ch;
-    if(this.fileCount=== "file"){
+    if(this.fileCount=== "fil"){
       this.checked= true;
     }
   }
