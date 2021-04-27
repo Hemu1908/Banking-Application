@@ -48,24 +48,25 @@ export class RtgsFormComponent  {
           sessionStorage.setItem('message',message);
           sessionStorage.setItem('referenceNo',String(refer));
           }
-        //alert(JSON.stringify(data));  
-        Swal.fire({ 
-          title: "Transfer Successful",
-          text: "Amount debited successfully!",
-          icon: "success",
-          confirmButtonText: "Okay"
-        });
-      })
+          //alert(JSON.stringify(data));
+          Swal.fire({ 
+            title: "Transfer Successful",
+            text: "Amount debited successfully!",
+            icon: "success",
+            confirmButtonText: "Okay"
+          });
+        })
+        }
+        else{
+          //alert("Invalid Otp!");
+          Swal.fire({
+            title: "Transfer Unsuccessful",
+            text: "Transfer rejected because of invald OTP",
+            icon: "error",
+            confirmButtonText: "Okay"
+          });
+        }
+      
+      }
     }
-    else{
-      //alert("Invalid Otp!");
-      Swal.fire({
-        title: "Transfer Unsuccessful",
-        text: "Transfer rejected because of invald OTP",
-        icon: "error",
-        confirmButtonText: "Okay"
-      });
-    }
-}
-
-}
+    

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Transactions } from '../app-model/transactions';
 import { CustomerService } from '../customer.service';
@@ -15,7 +16,7 @@ export class NeftFormComponent {
   referenceId : string;
   accounts = JSON.parse(sessionStorage.getItem('accounts'));
 
-  constructor(private service : CustomerService) { }
+  constructor(private service : CustomerService, private router : Router) { }
   fetchedOtp: String;
   userOtp: String;
   generateOtp(){
@@ -49,24 +50,26 @@ export class NeftFormComponent {
           sessionStorage.setItem('message',message);
           sessionStorage.setItem('referenceNo',String(refer));
           }
-        //alert(JSON.stringify(data));  
-        Swal.fire({ 
-          title: "Transfer Successful",
-          text: "Amount debited successfully!",
-          icon: "success",
-          confirmButtonText: "Okay"
-        });
-      })
-    }
-    else{
-      //alert("Invalid Otp!");
-      Swal.fire({
-        title: "Transfer Unsuccessful",
-        text: "Transfer rejected because of invald OTP",
-        icon: "error",
-        confirmButtonText: "Okay"
-      });
-    }
-  }
+          //alert(JSON.stringify(data));
+          Swal.fire({ 
+            title: "Transfer Successful",
+            text: "Amount debited successfully!",
+            icon: "success",
+            confirmButtonText: "Okay"
+          });
 
-}
+        })
+        }
+        else{
+          //alert("Invalid Otp!");
+          Swal.fire({
+            title: "Transfer Unsuccessful",
+            text: "Transfer rejected because of invald OTP",
+            icon: "error",
+            confirmButtonText: "Okay"
+          });
+        }
+      
+      }
+    }
+    
